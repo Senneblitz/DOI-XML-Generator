@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns="http://datacite.org/schema/kernel-4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
+  <identifier identifierType="DOI">10.21249/DZHW:SID2021-INS1-ATT1:1.0.0</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Organizational">German Centre for Higher Education Research and Science Studies (DZHW)</creatorName>
+    </creator>
+  </creators>
+  <titles>
+    <title xml:lang="de">Fragebogen der Studierendenbefragung in Deutschland 2021</title>
+  </titles>
+  <publisher>German Centre for Higher Education Research and Science Studies (DZHW)</publisher>
+  <publicationYear>2022</publicationYear>
+  <resourceType resourceTypeGeneral="Other">Instrument</resourceType>
+  <subjects>
+    <subject xml:lang="en" subjectScheme="TheSozWiss">university</subject>
+    <subject xml:lang="en" subjectScheme="TheSozWiss">student</subject>
+  </subjects>
+  <language>deu</language>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsPartOf">10.21249/DZHW:sid2021:1.0.0 </relatedIdentifier>
+  </relatedIdentifiers>
+  <version>1.0.0</version>
+  <fundingReferences>
+    <fundingReference>
+      <funderName>Bundesministerium für Bildung und Forschung</funderName>
+    </fundingReference>
+  </fundingReferences>
+</resource>

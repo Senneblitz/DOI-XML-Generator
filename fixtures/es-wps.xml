@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
+  <identifier identifierType="DOI">10.21249/ES:WPS</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Organizational">EUROSTUDENT project</creatorName>
+      <affiliation affiliationIdentifier="https://ror.org/01n8j6z65" affiliationIdentifierScheme="ROR" schemeURI="https://ror.org">German Centre for Higher Education Research and Science Studies</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title xml:lang="en">EUROSTUDENT Working Paper Series</title>
+  </titles>
+  <publisher>EUROSTUDENT-DZHW</publisher>
+  <publicationYear>2026</publicationYear>
+  <resourceType resourceTypeGeneral="Collection"/>
+  <subjects>
+    <subject subjectScheme="Fields of Science and Technology (FOS)" schemeURI="https://web-archive.oecd.org/2012-06-15/138575-38235147.pdf" classificationCode="5">FOS: Social sciences</subject>
+  </subjects>
+  <contributors>
+    <contributor contributorType="Editor">
+      <contributorName nameType="Personal">Flieder, Willi</contributorName>
+      <givenName>Willi</givenName>
+      <familyName>Flieder</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0000-0039-5955</nameIdentifier>
+      <affiliation affiliationIdentifier="https://ror.org/01n8j6z65" affiliationIdentifierScheme="ROR" schemeURI="https://ror.org">German Centre for Higher Education Research and Science Studies</affiliation>
+    </contributor>
+    <contributor contributorType="Editor">
+      <contributorName nameType="Personal">Farn, Ida</contributorName>
+      <givenName>Ida</givenName>
+      <familyName>Farn</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0000-0142-5423</nameIdentifier>
+      <affiliation/>
+    </contributor>
+    <contributor contributorType="Editor">
+      <contributorName nameType="Personal">Zeder, Katrin</contributorName>
+      <givenName>Katrin</givenName>
+      <familyName>Zeder</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0000-0095-0285</nameIdentifier>
+      <affiliation/>
+    </contributor>
+  </contributors>
+  <language>en</language>
+  <sizes/>
+  <formats>
+    <format>application/pdf</format>
+  </formats>
+  <version>1.0.0</version>
+  <descriptions>
+    <description xml:lang="en" descriptionType="SeriesInformation">The EUROSTUDENT Working Paper Series offers a platform for researchers to share early-stage work analyzing data collected through EUROSTUDENT student surveys. These surveys gather comparable data on the social and economic conditions of student life across 25+ European countries. The series aims to enhance the understanding of student life and higher education systems within the European Higher Education Area (EHEA).</description>
+  </descriptions>
+  <fundingReferences>
+    <fundingReference>
+      <funderName>Bundesministerium für Forschung, Technologie und Raumfahrt</funderName>
+      <funderIdentifier funderIdentifierType="Crossref Funder ID">https://doi.org/10.13039/501100002347</funderIdentifier>
+    </fundingReference>
+    <fundingReference>
+      <funderName>European Commission</funderName>
+      <funderIdentifier funderIdentifierType="Crossref Funder ID">https://doi.org/10.13039/501100000780</funderIdentifier>
+    </fundingReference>
+  </fundingReferences>
+</resource>

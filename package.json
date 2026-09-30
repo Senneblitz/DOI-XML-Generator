@@ -1,0 +1,15 @@
+{
+  "name": "datacite-maker",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Local tool for generating DataCite metadata XML for FDZ-DZHW DOI registrations",
+  "type": "module",
+  "scripts": {
+    "test": "node --test \"tests/**/*.test.js\"",
+    "serve": "python -m http.server 8123"
+  },
+  "devDependencies": {
+    "@xmldom/xmldom": "^0.9.12",
+    "xmllint-wasm": "^5.3.0"
+  }
+}

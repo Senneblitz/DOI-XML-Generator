@@ -1,0 +1,16 @@
+{
+  "id": "paper",
+  "label": "Working Paper / Data Paper",
+  "extends": "base",
+  "series": true,
+  "doi": { "prefix": "10.21249", "suffix": "{suffix}" },
+  "resourceTypeGeneral": ["Report", "DataPaper"],
+  "resourceTypeLabels": { "Report": "Working Paper", "DataPaper": "Data Paper" },
+  "defaults": {
+    "titles": [{ "value": "", "lang": "" }],
+    "resourceType": { "resourceTypeGeneral": "Report", "value": "Working Paper" }
+  },
+  "relations": [],
+  "locked": [],
+  "recommended": ["language", "descriptions", "rightsList"]
+}

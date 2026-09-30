@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
+  <identifier identifierType="DOI">10.21249/ES:WPS:012026:1.0.0</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Personal">Robinie, Maja</creatorName>
+      <givenName>Maja</givenName>
+      <familyName>Robinie</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0000-0015-8386</nameIdentifier>
+      <affiliation affiliationIdentifier="https://ror.org/02w2y2t16" affiliationIdentifierScheme="ROR" schemeURI="https://ror.org">Leuphana University of Lüneburg</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Fichte, Ida</creatorName>
+      <givenName>Ida</givenName>
+      <familyName>Fichte</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0000-0142-5423</nameIdentifier>
+      <affiliation affiliationIdentifier="https://ror.org/01n8j6z65" affiliationIdentifierScheme="ROR" schemeURI="https://ror.org">German Centre for Higher Education Research and Science Studies</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title xml:lang="en">Poor students, rich students - What actually determines the income concentration among students in Europe? </title>
+  </titles>
+  <publisher>EUROSTUDENT-DZHW</publisher>
+  <publicationYear>2026</publicationYear>
+  <resourceType resourceTypeGeneral="Report"/>
+  <subjects>
+    <subject subjectScheme="Fields of Science and Technology (FOS)" schemeURI="https://web-archive.oecd.org/2012-06-15/138575-38235147.pdf" classificationCode="5">FOS: Social sciences</subject>
+    <subject subjectScheme="Fields of Science and Technology (FOS)" schemeURI="https://web-archive.oecd.org/2012-06-15/138575-38235147.pdf" classificationCode="5.2">FOS: Economics and business</subject>
+  </subjects>
+  <language>en</language>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsPartOf" resourceTypeGeneral="Journal">10.21249/es:wps</relatedIdentifier>
+  </relatedIdentifiers>
+  <sizes/>
+  <formats/>
+  <version>1.0.0</version>
+  <rightsList>
+    <rights rightsURI="https://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International</rights>
+  </rightsList>
+  <descriptions>
+    <description xml:lang="en" descriptionType="Abstract">The framework conditions of studying such as the time available for study-related purposes depend, inter alia, on students’ economic resources provided by their parents. Great financial inequality among students in this respect often causes widely differing framework conditions for studying, which may have negative effects on the duration and success of studies for parts of the student population. So, what is the actual situation regarding the financial (in)equality among students in the European Higher Education Area (EHEA)? For 28 EHEA countries, the extent of financial inequality among students was first determined with the help of the Gini coefficient. On this measure, there are relatively large differences between countries, but whose determinants are yet unknown. Several simple linear regressions seem to indicate that family-related variables – financial support from the family, students' educational background, and living in the parental home – increase income concentration among student populations significantly, while national public student support reduces it considerably. However, a multiple linear regression model shows that only national public student support has a weakly significant effect, thus superimposing the effects of social origin. This means that public student support may be even more important than previously thought, particularly with regard to achieving the objective of equity of opportunity.</description>
+  </descriptions>
+  <fundingReferences>
+    <fundingReference>
+      <funderName>Bundesministerium für Forschung, Technologie und Raumfahrt</funderName>
+      <funderIdentifier funderIdentifierType="Crossref Funder ID">https://doi.org/10.13039/501100002347</funderIdentifier>
+    </fundingReference>
+  </fundingReferences>
+</resource>

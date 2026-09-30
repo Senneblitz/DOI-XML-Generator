@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Synthetic test record (not real metadata): exercises kernel fields the reference fixtures do not use. -->
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
+  <identifier identifierType="DOI">10.5072/EXAMPLE-FULL</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Organizational" xml:lang="de">Beispiel &amp; Partner &lt;Forschung&gt;</creatorName>
+      <nameIdentifier nameIdentifierScheme="ROR" schemeURI="https://ror.org/">https://ror.org/05xxxxx00</nameIdentifier>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Muster, Erika</creatorName>
+      <givenName>Erika</givenName>
+      <familyName>Muster</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0002-1825-0097</nameIdentifier>
+      <nameIdentifier nameIdentifierScheme="ISNI">0000000000000000</nameIdentifier>
+      <affiliation>Freitext-Institut ohne ID</affiliation>
+      <affiliation affiliationIdentifier="https://ror.org/01n8j6z65" affiliationIdentifierScheme="ROR" schemeURI="https://ror.org">German Centre for Higher Education Research and Science Studies</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title xml:lang="en">Full kernel "test" record</title>
+    <title titleType="Subtitle" xml:lang="en">With subtitle</title>
+    <title titleType="TranslatedTitle" xml:lang="de">Vollständiger Testdatensatz</title>
+  </titles>
+  <publisher xml:lang="en">Example Publisher</publisher>
+  <publicationYear>2026</publicationYear>
+  <resourceType resourceTypeGeneral="Text">Test record</resourceType>
+  <subjects>
+    <subject subjectScheme="DDC" classificationCode="300" xml:lang="en">Social sciences</subject>
+  </subjects>
+  <contributors>
+    <contributor contributorType="ContactPerson">
+      <contributorName nameType="Personal">Muster, Max</contributorName>
+      <givenName>Max</givenName>
+      <familyName>Muster</familyName>
+    </contributor>
+    <contributor contributorType="HostingInstitution">
+      <contributorName nameType="Organizational" xml:lang="en">Example Host</contributorName>
+    </contributor>
+  </contributors>
+  <dates>
+    <date dateType="Created">2026-01-15</date>
+    <date dateType="Other" dateInformation="Embargo end">2026-12-31</date>
+  </dates>
+  <language>en</language>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="URL">https://example.org/record?id=1&amp;v=2</alternateIdentifier>
+  </alternateIdentifiers>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="HasMetadata" relatedMetadataScheme="DDI" schemeURI="https://ddialliance.org/" schemeType="XSD">https://example.org/ddi.xml</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="Other" relationTypeInformation="Test relation">10.5072/other</relatedIdentifier>
+  </relatedIdentifiers>
+  <sizes>
+    <size>15 pages</size>
+    <size>2 MB</size>
+  </sizes>
+  <formats>
+    <format>application/pdf</format>
+  </formats>
+  <version>1.0.0</version>
+  <rightsList>
+    <rights rightsURI="https://creativecommons.org/licenses/by/4.0/legalcode" rightsIdentifier="cc-by-4.0" rightsIdentifierScheme="SPDX" schemeURI="https://spdx.org/licenses/" xml:lang="en">Creative Commons Attribution 4.0 International</rights>
+  </rightsList>
+  <descriptions>
+    <description xml:lang="en" descriptionType="Abstract">First line.<br/>Second line.</description>
+    <description xml:lang="en" descriptionType="TechnicalInfo">Plain technical info.</description>
+  </descriptions>
+  <geoLocations>
+    <geoLocation>
+      <geoLocationPlace>Hannover</geoLocationPlace>
+      <geoLocationPoint>
+        <pointLongitude>9.73322</pointLongitude>
+        <pointLatitude>52.37052</pointLatitude>
+      </geoLocationPoint>
+    </geoLocation>
+    <geoLocation>
+      <geoLocationBox>
+        <westBoundLongitude>5.87</westBoundLongitude>
+        <eastBoundLongitude>15.04</eastBoundLongitude>
+        <southBoundLatitude>47.27</southBoundLatitude>
+        <northBoundLatitude>55.06</northBoundLatitude>
+      </geoLocationBox>
+    </geoLocation>
+    <geoLocation>
+      <geoLocationPolygon>
+        <polygonPoint>
+          <pointLongitude>9.0</pointLongitude>
+          <pointLatitude>52.0</pointLatitude>
+        </polygonPoint>
+        <polygonPoint>
+          <pointLongitude>10.0</pointLongitude>
+          <pointLatitude>52.0</pointLatitude>
+        </polygonPoint>
+        <polygonPoint>
+          <pointLongitude>10.0</pointLongitude>
+          <pointLatitude>53.0</pointLatitude>
+        </polygonPoint>
+        <polygonPoint>
+          <pointLongitude>9.0</pointLongitude>
+          <pointLatitude>52.0</pointLatitude>
+        </polygonPoint>
+        <inPolygonPoint>
+          <pointLongitude>9.5</pointLongitude>
+          <pointLatitude>52.3</pointLatitude>
+        </inPolygonPoint>
+      </geoLocationPolygon>
+    </geoLocation>
+  </geoLocations>
+  <fundingReferences>
+    <fundingReference>
+      <funderName>Example Funder</funderName>
+      <funderIdentifier funderIdentifierType="ROR" schemeURI="https://ror.org/">https://ror.org/05xxxxx01</funderIdentifier>
+      <awardNumber awardURI="https://example.org/award/42">42</awardNumber>
+      <awardTitle>Example award</awardTitle>
+    </fundingReference>
+  </fundingReferences>
+  <relatedItems>
+    <relatedItem relatedItemType="Journal" relationType="IsPublishedIn">
+      <relatedItemIdentifier relatedItemIdentifierType="ISSN">1234-5678</relatedItemIdentifier>
+      <titles>
+        <title>Example Journal</title>
+      </titles>
+      <volume>7</volume>
+    </relatedItem>
+  </relatedItems>
+</resource>

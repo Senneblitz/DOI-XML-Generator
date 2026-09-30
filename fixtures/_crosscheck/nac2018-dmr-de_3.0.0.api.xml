@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
+  <identifier identifierType="DOI">10.21249/DZHW:NAC2018-DMR-DE:3.0.0</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Personal">Distel, Vera</creatorName>
+      <givenName>Vera</givenName>
+      <familyName>Distel</familyName>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Lärche, Alina</creatorName>
+      <givenName>Alina</givenName>
+      <familyName>Lärche</familyName>
+      <affiliation affiliationIdentifier="https://ror.org/03ym65z81" affiliationIdentifierScheme="ROR" schemeURI="https://ror.org">German Center for Integration and Migration Research</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Lorbeer, Ulf</creatorName>
+      <givenName>Ulf</givenName>
+      <familyName>Lorbeer</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0000-0118-7859</nameIdentifier>
+      <affiliation affiliationIdentifier="https://ror.org/01n8j6z65" affiliationIdentifierScheme="ROR" schemeURI="https://ror.org">German Centre for Higher Education Research and Science Studies</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Olive, Wicke</creatorName>
+      <givenName>Wicke</givenName>
+      <familyName>Olive</familyName>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Quitte, Cornelius</creatorName>
+      <givenName>Cornelius</givenName>
+      <familyName>Quitte</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0000-0047-5146</nameIdentifier>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Raute, Peter</creatorName>
+      <givenName>Peter</givenName>
+      <familyName>Raute</familyName>
+      <affiliation affiliationIdentifier="https://ror.org/01n8j6z65" affiliationIdentifierScheme="ROR" schemeURI="https://ror.org">German Centre for Higher Education Research and Science Studies</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Salbei, Jutta</creatorName>
+      <givenName>Jutta</givenName>
+      <familyName>Salbei</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0000-0087-1093</nameIdentifier>
+      <affiliation affiliationIdentifier="https://ror.org/01n8j6z65" affiliationIdentifierScheme="ROR" schemeURI="https://ror.org">German Centre for Higher Education Research and Science Studies</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Schlehe, Berta</creatorName>
+      <givenName>Berta</givenName>
+      <familyName>Schlehe</familyName>
+      <affiliation affiliationIdentifier="https://ror.org/01n8j6z65" affiliationIdentifierScheme="ROR" schemeURI="https://ror.org">German Centre for Higher Education Research and Science Studies</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Weide, Greta</creatorName>
+      <givenName>Greta</givenName>
+      <familyName>Weide</familyName>
+      <affiliation affiliationIdentifier="https://ror.org/01n8j6z65" affiliationIdentifierScheme="ROR" schemeURI="https://ror.org">German Centre for Higher Education Research and Science Studies</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Eiche, Helga</creatorName>
+      <givenName>Helga</givenName>
+      <familyName>Eiche</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0000-0063-352X</nameIdentifier>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Buche, Doris</creatorName>
+      <givenName>Doris</givenName>
+      <familyName>Buche</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0000-0079-1907</nameIdentifier>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Ginster, Klaus</creatorName>
+      <givenName>Klaus</givenName>
+      <familyName>Ginster</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0000-0000-0001</nameIdentifier>
+      <affiliation affiliationIdentifier="https://ror.org/01n8j6z65" affiliationIdentifierScheme="ROR" schemeURI="https://ror.org">German Centre for Higher Education Research and Science Studies</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Mandel, Ingo</creatorName>
+      <givenName>Ingo</givenName>
+      <familyName>Mandel</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0000-0150-4615</nameIdentifier>
+      <affiliation affiliationIdentifier="https://ror.org/01n8j6z65" affiliationIdentifierScheme="ROR" schemeURI="https://ror.org">German Centre for Higher Education Research and Science Studies</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Ulme, Nils</creatorName>
+      <givenName>Nils</givenName>
+      <familyName>Ulme</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0000-0126-704X</nameIdentifier>
+      <affiliation affiliationIdentifier="https://ror.org/01n8j6z65" affiliationIdentifierScheme="ROR" schemeURI="https://ror.org">German Centre for Higher Education Research and Science Studies</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Zypresse, David</creatorName>
+      <givenName>David</givenName>
+      <familyName>Zypresse</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0000-0102-9471</nameIdentifier>
+      <affiliation affiliationIdentifier="https://ror.org/01n8j6z65" affiliationIdentifierScheme="ROR" schemeURI="https://ror.org">German Centre for Higher Education Research and Science Studies</affiliation>
+    </creator>
+  </creators>
+  <titles>
+    <title xml:lang="de">Daten- und Methodenbericht zur Datenpaketversion 3.0.0 der National Academics Panel Study 2018 (1.-6. Befragungswelle)</title>
+  </titles>
+  <publisher publisherIdentifier="https://ror.org/01n8j6z65" publisherIdentifierScheme="ROR" schemeURI="https://ror.org">German Centre for Higher Education Research and Science Studies</publisher>
+  <publicationYear>2025</publicationYear>
+  <resourceType resourceTypeGeneral="Report">Data and Method Report</resourceType>
+  <dates>
+    <date dateType="Issued">2025</date>
+  </dates>
+  <language>de</language>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsSupplementTo" resourceTypeGeneral="Dataset">10.21249/dzhw:nac2018:3.0.0</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsNewVersionOf" resourceTypeGeneral="Report">10.21249/dzhw:nac2018-dmr-de:2.0.0</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsSupplementedBy" resourceTypeGeneral="Instrument">https://metadata.fdz.dzhw.eu/public/files/data-packages/stu-nac2018$-3.0.0/attachments/nac2018_QuestionOrigin.xlsx</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsTranslationOf" resourceTypeGeneral="Report">10.21249/dzhw:nac2018-dmr-en:3.0.0</relatedIdentifier>
+  </relatedIdentifiers>
+  <sizes/>
+  <formats/>
+  <version>3.0.0</version>
+  <rightsList>
+    <rights rightsURI="https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode">Creative Commons Attribution Non Commercial Share Alike 4.0 International</rights>
+  </rightsList>
+  <geoLocations>
+    <geoLocation>
+      <geoLocationPlace>Hannover</geoLocationPlace>
+    </geoLocation>
+  </geoLocations>
+</resource>

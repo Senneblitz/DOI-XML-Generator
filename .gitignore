@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Private save states (JSON exports that should not be committed)
+*.local.json
+/saves/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+
+# Originale Referenz-XMLs mit echten Personenangaben: bleiben lokal.
+# Das öffentliche fixtures/ enthält daraus erzeugte, anonymisierte Kopien (tools/anonymize.js).
+/fixtures-private/
+
+# Lokale Personenliste (aus den Originalen erzeugt, enthält Personendaten)
+/data/Creators.json

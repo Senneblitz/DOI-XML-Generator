@@ -1,0 +1,36 @@
+{
+  "series": [
+    {
+      "id": "eurostudent-wps",
+      "label": "EUROSTUDENT Working Paper Series",
+      "seriesDoi": "10.21249/es:wps",
+      "doi": { "prefix": "10.21249", "suffix": "es:wps:{nr}{jahr}:{version}" },
+      "resourceTypeGeneral": ["Report"],
+      "defaults": {
+        "publisher": { "name": "EUROSTUDENT-DZHW", "publisherIdentifier": "", "publisherIdentifierScheme": "", "schemeURI": "" },
+        "version": "{version}",
+        "rightsList": [
+          {
+            "value": "Creative Commons Attribution 4.0 International",
+            "rightsURI": "https://creativecommons.org/licenses/by/4.0/legalcode"
+          }
+        ],
+        "fundingReferences": [
+          {
+            "funderName": "Bundesministerium für Forschung, Technologie und Raumfahrt",
+            "funderIdentifier": { "value": "https://doi.org/10.13039/501100002347", "funderIdentifierType": "Crossref Funder ID" }
+          },
+          {
+            "funderName": "European Commission",
+            "funderIdentifier": { "value": "https://doi.org/10.13039/501100000780", "funderIdentifierType": "Crossref Funder ID" }
+          }
+        ]
+      },
+      "relations": [
+        { "relationType": "IsPartOf", "relatedIdentifierType": "DOI", "resourceTypeGeneral": "Journal", "value": "10.21249/es:wps" },
+        { "relationType": "IsNewVersionOf", "relatedIdentifierType": "DOI", "resourceTypeGeneral": "Report", "value": "10.21249/es:wps:{nr}{jahr}:{previousVersion}" }
+      ],
+      "locked": ["publisher", "resourceType.resourceTypeGeneral", "version"]
+    }
+  ]
+}

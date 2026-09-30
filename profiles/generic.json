@@ -1,0 +1,14 @@
+{
+  "id": "generic",
+  "label": "Generisches Dokument",
+  "extends": "base",
+  "doi": { "prefix": "10.21249", "suffix": "DZHW:{suffix}" },
+  "resourceTypeGeneral": ["Text", "Report", "Book", "BookChapter", "Preprint", "Presentation", "Poster", "Other"],
+  "defaults": {
+    "titles": [{ "value": "", "lang": "" }],
+    "resourceType": { "resourceTypeGeneral": "Text", "value": "" }
+  },
+  "relations": [],
+  "locked": [],
+  "recommended": ["language"]
+}

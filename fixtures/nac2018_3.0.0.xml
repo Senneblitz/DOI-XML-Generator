@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
+  <identifier identifierType="DOI">10.21249/DZHW:NAC2018:3.0.0</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Personal">Ahorn, Jonas</creatorName>
+      <givenName>Jonas</givenName>
+      <familyName>Ahorn</familyName>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Akazie, Tanja</creatorName>
+      <givenName>Tanja</givenName>
+      <familyName>Akazie</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">0000-0000-0071-2711</nameIdentifier>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Birke, Xenia</creatorName>
+      <givenName>Xenia</givenName>
+      <familyName>Birke</familyName>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Distel, Vera</creatorName>
+      <givenName>Vera</givenName>
+      <familyName>Distel</familyName>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Erle, Hannes</creatorName>
+      <givenName>Hannes</givenName>
+      <familyName>Erle</familyName>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Esche, Fabian</creatorName>
+      <givenName>Fabian</givenName>
+      <familyName>Esche</familyName>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Espe, Anton</creatorName>
+      <givenName>Anton</givenName>
+      <familyName>Espe</familyName>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Holunder, Martin</creatorName>
+      <givenName>Martin</givenName>
+      <familyName>Holunder</familyName>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Hasel, Gustav</creatorName>
+      <givenName>Gustav</givenName>
+      <familyName>Hasel</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">0000-0000-0158-3800</nameIdentifier>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Kastanie, Olga</creatorName>
+      <givenName>Olga</givenName>
+      <familyName>Kastanie</familyName>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Kiefer, Sven</creatorName>
+      <givenName>Sven</givenName>
+      <familyName>Kiefer</familyName>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Lärche, Alina</creatorName>
+      <givenName>Alina</givenName>
+      <familyName>Lärche</familyName>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Linde, Fabian</creatorName>
+      <givenName>Fabian</givenName>
+      <familyName>Linde</familyName>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Lorbeer, Ulf</creatorName>
+      <givenName>Ulf</givenName>
+      <familyName>Lorbeer</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">0000-0000-0118-7859</nameIdentifier>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Malve, Zoe</creatorName>
+      <givenName>Zoe</givenName>
+      <familyName>Malve</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">0000-0000-0134-6231</nameIdentifier>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Mandel, Ingo</creatorName>
+      <givenName>Ingo</givenName>
+      <familyName>Mandel</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">0000-0000-0150-4615</nameIdentifier>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Nessel, Helga</creatorName>
+      <givenName>Helga</givenName>
+      <familyName>Nessel</familyName>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Olive, Wicke</creatorName>
+      <givenName>Wicke</givenName>
+      <familyName>Olive</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">0000-0000-0110-8663</nameIdentifier>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Pappel, Carla</creatorName>
+      <givenName>Carla</givenName>
+      <familyName>Pappel</familyName>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Platane, Lars</creatorName>
+      <givenName>Lars</givenName>
+      <familyName>Platane</familyName>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Quitte, Cornelius</creatorName>
+      <givenName>Cornelius</givenName>
+      <familyName>Quitte</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">0000-0000-0047-5146</nameIdentifier>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Raute, Quirin</creatorName>
+      <givenName>Quirin</givenName>
+      <familyName>Raute</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">0000-0000-0055-4338</nameIdentifier>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Salbei, Jutta</creatorName>
+      <givenName>Jutta</givenName>
+      <familyName>Salbei</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">0000-0000-0087-1093</nameIdentifier>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Schlehe, Berta</creatorName>
+      <givenName>Berta</givenName>
+      <familyName>Schlehe</familyName>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Tanne, Yannick</creatorName>
+      <givenName>Yannick</givenName>
+      <familyName>Tanne</familyName>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Thymian, Frieda</creatorName>
+      <givenName>Frieda</givenName>
+      <familyName>Thymian</familyName>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Weide, Greta</creatorName>
+      <givenName>Greta</givenName>
+      <familyName>Weide</familyName>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Weißdorn, Rita</creatorName>
+      <givenName>Rita</givenName>
+      <familyName>Weißdorn</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">0000-0000-0023-7578</nameIdentifier>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Eiche, Helga</creatorName>
+      <givenName>Helga</givenName>
+      <familyName>Eiche</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">0000-0000-0063-352X</nameIdentifier>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Ampfer, Elena</creatorName>
+      <givenName>Elena</givenName>
+      <familyName>Ampfer</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">0000-0000-0031-676X</nameIdentifier>
+      <affiliation>German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </creator>
+    <creator>
+      <creatorName nameType="Organizational">German Centre for Higher Education Research and Science Studies (DZHW)</creatorName>
+    </creator>
+  </creators>
+  <titles>
+    <title xml:lang="de">National Academics Panel Study (Nacaps) 2018</title>
+    <title xml:lang="en">National Academics Panel Study (Nacaps) 2018</title>
+  </titles>
+  <publisher publisherIdentifier="https://ror.org/01n8j6z65" publisherIdentifierScheme="ROR" schemeURI="https://ror.org/" xml:lang="en">German Centre for Higher Education Research and Science Studies (DZHW)</publisher>
+  <publicationYear>2025</publicationYear>
+  <resourceType resourceTypeGeneral="Dataset"/>
+  <subjects>
+    <subject xml:lang="en">Higher Education Research</subject>
+    <subject xml:lang="en">Doctoral supervision</subject>
+    <subject xml:lang="en">Job success</subject>
+    <subject xml:lang="en">Country of birth</subject>
+    <subject xml:lang="en">Social background</subject>
+    <subject xml:lang="en">Gender</subject>
+    <subject xml:lang="en">Doctorate conditions</subject>
+    <subject xml:lang="en">Work-life balance</subject>
+    <subject xml:lang="en">Career goals</subject>
+    <subject xml:lang="en">Political participation</subject>
+    <subject xml:lang="en">Dropout from doctoral studies</subject>
+    <subject xml:lang="en">Employment</subject>
+    <subject xml:lang="en">Scientific activities</subject>
+    <subject xml:lang="en">Personality traits</subject>
+    <subject xml:lang="en">International mobility</subject>
+    <subject xml:lang="en">Motivation for a doctorate</subject>
+    <subject xml:lang="en">Doctoral funding</subject>
+    <subject xml:lang="en">Age</subject>
+    <subject xml:lang="en">Further education</subject>
+    <subject xml:lang="en">Earning a doctorate</subject>
+    <subject xml:lang="en">Science communication</subject>
+    <subject xml:lang="en">Parenthood</subject>
+    <subject xml:lang="en">Health</subject>
+    <subject xml:lang="en">Employment conditions</subject>
+    <subject xml:lang="en">Citizenship</subject>
+    <subject xml:lang="en">Employment situation</subject>
+    <subject xml:lang="en">Doctoral grade</subject>
+    <subject xml:lang="en">Science Studies</subject>
+    <subject xml:lang="en">Higher and further education</subject>
+    <subject xml:lang="en">Employment history</subject>
+    <subject xml:lang="en">Returns on education</subject>
+    <subject xml:lang="en">Partnership</subject>
+    <subject xml:lang="en">Conflicts during the doctoral phase</subject>
+    <subject xml:lang="en">Educational biography</subject>
+    <subject xml:lang="de">Promotionsbetreuung</subject>
+    <subject xml:lang="de">Staatsangehörigkeit</subject>
+    <subject xml:lang="de">Karriereziele</subject>
+    <subject xml:lang="de">Beschäftigungssituation</subject>
+    <subject xml:lang="de">Promotionsabbruch</subject>
+    <subject xml:lang="de">Promotion</subject>
+    <subject xml:lang="de">Erwerbsverlauf</subject>
+    <subject xml:lang="de">Konflikte in der Promotionsphase</subject>
+    <subject xml:lang="de">Berufserfolg</subject>
+    <subject xml:lang="de">Wissenschaftsforschung</subject>
+    <subject xml:lang="de">Persönlichkeitsmerkmale</subject>
+    <subject xml:lang="de">Soziale Herkunft</subject>
+    <subject xml:lang="de">Politische Partizipation</subject>
+    <subject xml:lang="de">Promotionsnote</subject>
+    <subject xml:lang="de">Wissenschaftskommunikation</subject>
+    <subject xml:lang="de">Gesundheit</subject>
+    <subject xml:lang="de">Geschlecht</subject>
+    <subject xml:lang="de">Höhere Bildung</subject>
+    <subject xml:lang="de">Beschäftigung und Erwerbstätigkeit</subject>
+    <subject xml:lang="de">Hochschulforschung</subject>
+    <subject xml:lang="de">Promotionsfinanzierung</subject>
+    <subject xml:lang="de">Auslandsmobilität</subject>
+    <subject xml:lang="de">Weiterbildung</subject>
+    <subject xml:lang="de">Promotionsmotive</subject>
+    <subject xml:lang="de">Wissenschaftliche Aktivitäten</subject>
+    <subject xml:lang="de">Bildungsbiographie</subject>
+    <subject xml:lang="de">Geburtsland</subject>
+    <subject xml:lang="de">Beschäftigungsbedingungen</subject>
+    <subject xml:lang="de">Alter</subject>
+    <subject xml:lang="de">Vereinbarkeit von Arbeits- und Privatleben</subject>
+    <subject xml:lang="de">Bildungsertrag</subject>
+    <subject xml:lang="de">Elternschaft</subject>
+    <subject xml:lang="de">Promotionsbedingungen</subject>
+    <subject xml:lang="de">Partnerschaft</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/c9fe8208-3ab7-4eef-ae87-2463fbd80e75" xml:lang="en">EVALUATION</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/57786866-e214-4813-bc50-d82cfb076f19" xml:lang="en">DROPPING OUT (EDUCATION)</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/d81ee447-fde7-4df6-931f-0e4f1f5bdcc7" xml:lang="en">ASPIRATION</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/6952f7f5-d14f-4c24-9ffb-18b46c6d3a82" xml:lang="en">WORKPLACE RELATIONS</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/5b3f166f-861f-4ad4-972d-16d4b0a86ec0" xml:lang="en">EMPLOYMENT ABROAD</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/205c56de-d9b4-4548-92b2-411873c0b417" xml:lang="en">INCOME</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/2e0911b6-f1bd-4a70-acb5-a9a6aff672ea" xml:lang="en">ACHIEVEMENT</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/93c92122-f93f-48de-b89d-3fdcc3678fac" xml:lang="en">FURTHER EDUCATION</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/91c1b36f-85ff-4345-9678-86a4950fe57a" xml:lang="en">HEALTH</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/d0983511-acac-4585-ae73-a5d3ae2b54c7" xml:lang="en">SEX</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/b3772c1d-11ea-48af-b9c8-36ea435744d5" xml:lang="en">COMMUNICATIONS</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/9c6a01c1-2fe1-43e4-adcb-8ae90c50d0c2" xml:lang="en">WORKING CONDITIONS</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/edc187c7-a676-4190-98e3-077a1a333ad1" xml:lang="en">CIVIL STATUS</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/30c487b1-95d6-4f35-908b-5cb2250566c8" xml:lang="en">INTERPERSONAL CONFLICT</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/223f7f55-37e3-44e8-9ce4-4e2dfd1fe024" xml:lang="en">EMPLOYMENT HISTORY</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/a94a7099-0eec-4b90-a266-0010346af5a3" xml:lang="en">CAREER DEVELOPMENT</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/69e51285-e161-4d52-a73a-1f488f91b1be" xml:lang="en">SOCIAL ORIGIN</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/9eca9c03-c900-44d9-806f-3acec00f8fc2" xml:lang="en">CHILDREN</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/b9d85148-69d2-4adb-9dae-e00afb8bcc8c" xml:lang="en">POLITICAL BEHAVIOUR</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/778dc4e5-2aea-41fb-acbc-f04940788616" xml:lang="en">AGE</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/d896a730-3689-4498-a5c6-3cee1caf828b" xml:lang="en">POLITICAL INTEREST</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/5ce975a2-714c-4529-8a3d-7412dadfa117" xml:lang="en">LABOUR RELATIONS</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/75ed25d9-771c-4142-a362-e944ad716efe" xml:lang="en">RESEARCH WORK</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/a1cf0d47-2b9d-4141-94e6-769221c2dfe8" xml:lang="en">PERSONALITY TRAITS</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/35d91498-58d1-4b2f-9946-94124b3f95a6" xml:lang="en">FINANCIAL RESOURCES</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/dfc39f11-b25c-43d9-bd64-176a070ef42f" xml:lang="en">JOB CHARACTERISTICS</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/0722ed90-dfb8-46e0-8c96-37f1cc3d7337" xml:lang="en">WORK-LIFE BALANCE</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/e0378fa2-c83b-4d48-b5ee-7e4a85446768" xml:lang="en">EDUCATIONAL ENVIRONMENT</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/c4cb3540-d9a3-4e1e-a3da-c5ab7ef4e7db" xml:lang="en">ECONOMIC ACTIVITY</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/101da3ba-0ede-4e67-939e-6996477dcdc0" xml:lang="en">NATIONALITY</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/c808a829-173a-44fe-85fd-bcc0a1c034a7" xml:lang="en">PARTNERSHIPS (PERSONAL)</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/baefa0b5-c39f-408f-a92a-ea7e7a6c6185" xml:lang="en">EDUCATIONAL BACKGROUND</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/821588b7-b0aa-4feb-9217-c16d1c6a88bf" xml:lang="en">PLACE OF BIRTH</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/690d5b2b-483d-4631-8b65-e1192f592466" xml:lang="en">TERTIARY EDUCATION (SECOND STAGE)</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/99f97752-b483-4723-9f6d-ec6235e813e0" xml:lang="en">CONDITIONS OF EMPLOYMENT</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/3cb85d5f-db5a-4222-8d5d-ef9d57d484ac" xml:lang="en">MOTIVATION</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/d81ee447-fde7-4df6-931f-0e4f1f5bdcc7" xml:lang="de">BESTREBUNG</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/c808a829-173a-44fe-85fd-bcc0a1c034a7" xml:lang="de">PARTNERSCHAFTEN (ZWISCHENMENSCHLICHE BEZIEHUNGEN)</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/5b3f166f-861f-4ad4-972d-16d4b0a86ec0" xml:lang="de">BESCHÄFTIGUNG IM AUSLAND</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/9c6a01c1-2fe1-43e4-adcb-8ae90c50d0c2" xml:lang="de">ARBEITSBEDINGUNGEN</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/6952f7f5-d14f-4c24-9ffb-18b46c6d3a82" xml:lang="de">BEZIEHUNGEN AM ARBEITSPLATZ</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/b9d85148-69d2-4adb-9dae-e00afb8bcc8c" xml:lang="de">POLITISCHES VERHALTEN</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/dfc39f11-b25c-43d9-bd64-176a070ef42f" xml:lang="de">TÄTIGKEITSMERKMALE</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/d0983511-acac-4585-ae73-a5d3ae2b54c7" xml:lang="de">GESCHLECHT</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/0722ed90-dfb8-46e0-8c96-37f1cc3d7337" xml:lang="de">WORK-LIFE-BALANCE</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/30c487b1-95d6-4f35-908b-5cb2250566c8" xml:lang="de">ZWISCHENMENSCHLICHER KONFLIKT</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/778dc4e5-2aea-41fb-acbc-f04940788616" xml:lang="de">ALTER (ALLGEMEIN)</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/93c92122-f93f-48de-b89d-3fdcc3678fac" xml:lang="de">WEITERBILDUNG</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/35d91498-58d1-4b2f-9946-94124b3f95a6" xml:lang="de">FINANZIELLE RESSOURCEN</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/57786866-e214-4813-bc50-d82cfb076f19" xml:lang="de">BILDUNGSABBRUCH</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/91c1b36f-85ff-4345-9678-86a4950fe57a" xml:lang="de">GESUNDHEIT</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/e0378fa2-c83b-4d48-b5ee-7e4a85446768" xml:lang="de">BILDUNGSUMFELD</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/c9fe8208-3ab7-4eef-ae87-2463fbd80e75" xml:lang="de">BEWERTUNG</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/99f97752-b483-4723-9f6d-ec6235e813e0" xml:lang="de">BESCHÄFTIGUNGSBEDINGUNGEN</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/edc187c7-a676-4190-98e3-077a1a333ad1" xml:lang="de">FAMILIENSTAND</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/223f7f55-37e3-44e8-9ce4-4e2dfd1fe024" xml:lang="de">BERUFLICHER WERDEGANG</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/2e0911b6-f1bd-4a70-acb5-a9a6aff672ea" xml:lang="de">ERBRACHTE LEISTUNG</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/baefa0b5-c39f-408f-a92a-ea7e7a6c6185" xml:lang="de">VORBILDUNG</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/69e51285-e161-4d52-a73a-1f488f91b1be" xml:lang="de">SOZIALE HERKUNFT</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/c4cb3540-d9a3-4e1e-a3da-c5ab7ef4e7db" xml:lang="de">BESCHÄFTIGUNGSSTATUS</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/9eca9c03-c900-44d9-806f-3acec00f8fc2" xml:lang="de">KINDER</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/690d5b2b-483d-4631-8b65-e1192f592466" xml:lang="de">HÖHERE BILDUNG (STUFE 2)</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/205c56de-d9b4-4548-92b2-411873c0b417" xml:lang="de">EINKÜNFTE</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/d896a730-3689-4498-a5c6-3cee1caf828b" xml:lang="de">POLITISCHES INTERESSE</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/b3772c1d-11ea-48af-b9c8-36ea435744d5" xml:lang="de">KOMMUNIKATION</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/a94a7099-0eec-4b90-a266-0010346af5a3" xml:lang="de">KARRIEREENTWICKLUNG</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/5ce975a2-714c-4529-8a3d-7412dadfa117" xml:lang="de">ARBEITSBEZIEHUNGEN</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/a1cf0d47-2b9d-4141-94e6-769221c2dfe8" xml:lang="de">PERSÖNLICHKEITSMERKMALE</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/821588b7-b0aa-4feb-9217-c16d1c6a88bf" xml:lang="de">GEBURTSORT</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/101da3ba-0ede-4e67-939e-6996477dcdc0" xml:lang="de">STAATSANGEHÖRIGKEIT</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/3cb85d5f-db5a-4222-8d5d-ef9d57d484ac" xml:lang="de">MOTIVATION</subject>
+    <subject subjectScheme="CESSDA European Language Social Science Thesaurus (ELSST)" schemeURI="https://thesauri.cessda.eu/elsst-4/en/" valueURI="https://thesauri.cessda.eu/elsst-4/en/page/75ed25d9-771c-4142-a362-e944ad716efe" xml:lang="de">FORSCHUNGSARBEIT</subject>
+  </subjects>
+  <contributors>
+    <contributor contributorType="Distributor">
+      <contributorName nameType="Organizational">FDZ-DZHW</contributorName>
+      <nameIdentifier nameIdentifierScheme="ROR" schemeURI="https://ror.org/">https://ror.org/01n8j6z65</nameIdentifier>
+    </contributor>
+    <contributor contributorType="DataCurator">
+      <contributorName nameType="Personal">Zypresse, David</contributorName>
+      <givenName>David</givenName>
+      <familyName>Zypresse</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">0000-0000-0102-9471</nameIdentifier>
+      <affiliation affiliationIdentifier="https://ror.org/01n8j6z65" affiliationIdentifierScheme="ROR" schemeURI="https://ror.org/">German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </contributor>
+    <contributor contributorType="DataCurator">
+      <contributorName nameType="Personal">Ulme, Nils</contributorName>
+      <givenName>Nils</givenName>
+      <familyName>Ulme</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">0000-0000-0126-704X</nameIdentifier>
+      <affiliation affiliationIdentifier="https://ror.org/01n8j6z65" affiliationIdentifierScheme="ROR" schemeURI="https://ror.org/">German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </contributor>
+    <contributor contributorType="DataCurator">
+      <contributorName nameType="Personal">Mandel, Ingo</contributorName>
+      <givenName>Ingo</givenName>
+      <familyName>Mandel</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">0000-0000-0150-4615</nameIdentifier>
+      <affiliation affiliationIdentifier="https://ror.org/01n8j6z65" affiliationIdentifierScheme="ROR" schemeURI="https://ror.org/">German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </contributor>
+    <contributor contributorType="DataCurator">
+      <contributorName nameType="Personal">Ginster, Klaus</contributorName>
+      <givenName>Klaus</givenName>
+      <familyName>Ginster</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">0000-0000-0000-0001</nameIdentifier>
+      <affiliation affiliationIdentifier="https://ror.org/01n8j6z65" affiliationIdentifierScheme="ROR" schemeURI="https://ror.org/">German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </contributor>
+    <contributor contributorType="DataCurator">
+      <contributorName nameType="Personal">Eibe, Carla</contributorName>
+      <givenName>Carla</givenName>
+      <familyName>Eibe</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">0000-0000-0007-9194</nameIdentifier>
+      <affiliation affiliationIdentifier="https://ror.org/01n8j6z65" affiliationIdentifierScheme="ROR" schemeURI="https://ror.org/">German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </contributor>
+    <contributor contributorType="DataCurator">
+      <contributorName nameType="Personal">Buche, Doris</contributorName>
+      <givenName>Doris</givenName>
+      <familyName>Buche</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">0000-0000-0079-1907</nameIdentifier>
+      <affiliation affiliationIdentifier="https://ror.org/01n8j6z65" affiliationIdentifierScheme="ROR" schemeURI="https://ror.org/">German Centre for Higher Education Research and Science Studies (DZHW)</affiliation>
+    </contributor>
+  </contributors>
+  <dates>
+    <date dateType="Available">2025-12-09</date>
+    <date dateType="Collected" dateInformation="Nacaps 2018 - wave 1">2019-02-18/2019-05-01</date>
+    <date dateType="Collected" dateInformation="Nacaps 2018 - wave 2">2020-03-18/2020-07-01</date>
+    <date dateType="Collected" dateInformation="Nacaps 2018 - wave 3">2021-04-20/2021-06-22</date>
+    <date dateType="Collected" dateInformation="Nacaps 2018 - wave 4">2022-04-12/2022-06-01</date>
+    <date dateType="Collected" dateInformation="Nacaps 2018 - wave 5">2023-05-15/2023-07-08</date>
+    <date dateType="Collected" dateInformation="Nacaps 2018 - wave 6">2024-04-17/2024-06-07</date>
+  </dates>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsNewVersionOf">10.21249/DZHW:nac2018:2.0.0</relatedIdentifier>
+  </relatedIdentifiers>
+  <sizes/>
+  <formats/>
+  <version>3.0.0</version>
+  <rightsList>
+    <rights xml:lang="de">Beantragung notwendig unter https://metadata.fdz.dzhw.eu/de/data-packages/stu-nac2018$?version=3.0.0</rights>
+    <rights xml:lang="en">Application necessary under https://metadata.fdz.dzhw.eu/en/data-packages/stu-nac2018$?version=3.0.0</rights>
+  </rightsList>
+  <descriptions>
+    <description xml:lang="en" descriptionType="Abstract">Nacaps, the National Academics Panel Study, is a new longitudinal study of doctoral candidates and doctorate holders in Germany funded by the Federal Ministry of Education and Research (BMBF). The project aims at providing nationwide cross-sectional and longitudinal data on doctoral candidates and doctorate holders in Germany regarding their study conditions as well as their career trajectories within and outside of academia. The Nacaps study series apply a panel design to multiple cohorts. Nacaps 2018 is the first cohort in this series of studies. In 2019, all doctoral candidates registered at 53 higher education institutions entitled to award PhDs/doctorates in Germany as off 01.12.2018 were invited to a first survey. Further panel waves follow at yearly intervals. Topics of the survey are e.g. the kind and structure of doctoral studies, motives for conducting doctoral studies, the mentoring situation, working and employment conditions, plans for career paths after the doctorate, international mobility, as well as individual characteristics of respondents. By covering these topics and by considering important indicators on young scholars, the Nacaps data provide important knowledge for national reporting (e.g. the federal report on young academics called “Bundesbericht wissenschaftlicher Nachwuchs”), for local steering, as well as for numerous further stakeholders. Moreover, the data offer an opportunity to investigate scientific research questions in the field of academic careers.</description>
+    <description xml:lang="de" descriptionType="Abstract">Nacaps steht für „National Academics Panel Study“ („Nationales Akademikerpanel“) und ist eine vom Bundesministerium für Bildung und Forschung (BMBF) geförderte Längsschnittstudie zu Promovierenden und Promovierten in Deutschland. Ziel des Projekts ist es, sowohl deutschlandweit repräsentative Querschnittsdaten zu den Qualifizierungsbedingungen als auch Längsschnittdaten zu den individuellen Erwerbs- und Karriereverläufen Promovierender und Promovierter innerhalb und außerhalb der Wissenschaft zu erheben. Die Nacaps-Studienreihe ist dabei als Multi-Kohorten-Panel-Design konzipiert.
+Nacaps 2018 bildet als erste Kohorte den Auftakt dieser Studienreihe. Im Jahr 2019 wurden an 53 promotionsberechtigten Hochschulen in Deutschland alle dort zum 01.12.2018 registrierten Promovierenden zu einer ersten Online-Befragung eingeladen. Weitere Panelerhebungen folgen in einem jährlichen Abstand.
+Zu den thematischen Schwerpunkten zählen beispielsweise Art und Struktur der Promotion, Promotionsmotive und Betreuungssituation sowie Arbeits- und Beschäftigungsbedingungen, geplante Karrierewege nach der Promotion, Auslandsmobilität und persönliche Merkmale der Befragten. Mit diesen Themen und der Berücksichtigung wichtiger Indikatoren im Bereich wissenschaftlicher Nachwuchs stellen die Nacaps-Daten sowohl für die nationale Berichterstattung, wie dem Bundesbericht wissenschaftlicher Nachwuchs, als auch für die lokale Steuerung vor Ort sowie zahlreiche weitere Akteure wichtiges Steuerungswissen zur Verfügung. Schließlich bieten sie ebenfalls die Grundlage zur empirischen Beantwortung wissenschaftlicher Fragestellungen im Forschungsfeld wissenschaftlicher Karrieren.</description>
+    <description xml:lang="en" descriptionType="Methods">Persons who were registered for a PhD/doctorate at a German university on the cut-off date 1 December 2018</description>
+    <description xml:lang="de" descriptionType="Methods">Personen, die zum Stichtag 1. Dezember 2018 an einer  deutschen Hochschule zur Promotion registriert waren</description>
+    <description xml:lang="en" descriptionType="Methods">Persons who were registered for a PhD/doctorate at a German university on the cut-off date 1 December 2018</description>
+    <description xml:lang="de" descriptionType="Methods">Personen, die zum Stichtag 1. Dezember 2018 an einer  deutschen Hochschule zur Promotion registriert waren</description>
+    <description xml:lang="en" descriptionType="Methods">Persons who were registered for a PhD/doctorate at a German university on the cut-off date 1 December 2018</description>
+    <description xml:lang="de" descriptionType="Methods">Personen, die zum Stichtag 1. Dezember 2018 an einer  deutschen Hochschule zur Promotion registriert waren</description>
+    <description xml:lang="en" descriptionType="Methods">Persons who were registered for a PhD/doctorate at a German university on the cut-off date 1 December 2018</description>
+    <description xml:lang="de" descriptionType="Methods">Personen, die zum Stichtag 1. Dezember 2018 an einer  deutschen Hochschule zur Promotion registriert waren</description>
+    <description xml:lang="en" descriptionType="Methods">Persons who were registered for a PhD/doctorate at a German university on the cut-off date 1 December 2018</description>
+    <description xml:lang="de" descriptionType="Methods">Personen, die zum Stichtag 1. Dezember 2018 an einer  deutschen Hochschule zur Promotion registriert waren</description>
+    <description xml:lang="en" descriptionType="Methods">Persons who were registered for a PhD/doctorate at a German university on the cut-off date 1 December 2018</description>
+    <description xml:lang="de" descriptionType="Methods">Personen, die zum Stichtag 1. Dezember 2018 an einer  deutschen Hochschule zur Promotion registriert waren</description>
+  </descriptions>
+  <geoLocations>
+    <geoLocation>
+      <geoLocationPlace>Germany</geoLocationPlace>
+    </geoLocation>
+    <geoLocation>
+      <geoLocationPlace>Germany</geoLocationPlace>
+    </geoLocation>
+    <geoLocation>
+      <geoLocationPlace>Germany</geoLocationPlace>
+    </geoLocation>
+    <geoLocation>
+      <geoLocationPlace>Germany</geoLocationPlace>
+    </geoLocation>
+    <geoLocation>
+      <geoLocationPlace>Germany</geoLocationPlace>
+    </geoLocation>
+    <geoLocation>
+      <geoLocationPlace>Germany</geoLocationPlace>
+    </geoLocation>
+  </geoLocations>
+  <fundingReferences>
+    <fundingReference>
+      <funderName>Bundesministerium für Bildung und Forschung (BMBF)</funderName>
+    </fundingReference>
+    <fundingReference>
+      <funderName>Federal Ministry of Education and Research</funderName>
+    </fundingReference>
+  </fundingReferences>
+</resource>

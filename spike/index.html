@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CORS-Spike ROR/ORCID</title>
+  <style>
+    body { font: 14px/1.4 system-ui, sans-serif; margin: 1rem; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 4px 6px; text-align: left; vertical-align: top; }
+    td.num { text-align: right; font-variant-numeric: tabular-nums; }
+    .ok { color: #070; } .err { color: #b00; }
+    code, pre { font-size: 12px; }
+    pre { white-space: pre-wrap; max-height: 16rem; overflow: auto; background: #f6f6f6; padding: 6px; }
+  </style>
+</head>
+<body>
+  <h1>CORS-Spike: ROR API v2 und ORCID Public API</h1>
+  <p>Wegwerf-Testseite für Phase 2. Aufruf über <code>http://localhost:8123/spike/</code>.</p>
+  <button id="run">Alle Tests ausführen</button>
+  <span id="state"></span>
+  <table>
+    <thead>
+      <tr><th>API</th><th>Anfrage</th><th>Status</th><th>ms (Läufe)</th><th>Treffer</th><th>Erster Treffer</th><th>Lesbare Header</th></tr>
+    </thead>
+    <tbody id="out"></tbody>
+  </table>
+  <h2>Beispielantworten (gekürzt)</h2>
+  <div id="samples"></div>
+  <script type="module" src="spike.js"></script>
+</body>
+</html>

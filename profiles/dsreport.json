@@ -1,0 +1,20 @@
+{
+  "id": "dsreport",
+  "label": "Codebook-/Variablenreport (Datensatz)",
+  "extends": "base",
+  "doi": { "prefix": "10.21249", "suffix": "DZHW:{studie}-ds{ds}_DsReport_{lang}:{version}" },
+  "resourceTypeGeneral": ["Report"],
+  "defaults": {
+    "titles": [{ "value": "", "lang": "{lang}" }],
+    "resourceType": { "resourceTypeGeneral": "Report", "value": "Variable Report" },
+    "language": "{lang}",
+    "version": "{version}"
+  },
+  "relations": [
+    { "relationType": "IsPartOf", "relatedIdentifierType": "DOI", "resourceTypeGeneral": "Dataset", "value": "10.21249/DZHW:{studie}:{version}" },
+    { "relationType": "IsNewVersionOf", "relatedIdentifierType": "DOI", "resourceTypeGeneral": "Report", "value": "10.21249/DZHW:{studie}-ds{ds}_DsReport_{lang}:{previousVersion}" },
+    { "relationType": "IsTranslationOf", "relatedIdentifierType": "DOI", "resourceTypeGeneral": "Report", "value": "10.21249/DZHW:{studie}-ds{ds}_DsReport_{otherLang}:{version}" }
+  ],
+  "locked": ["publisher", "resourceType", "language", "version"],
+  "recommended": []
+}

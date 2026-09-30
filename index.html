@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DataCite Maker – FDZ-DZHW</title>
+  <link rel="stylesheet" href="src/ui/style.css">
+</head>
+<body>
+  <header>
+    <h1>DataCite Maker</h1>
+    <p>Metadaten-XML für DOI-Registrierungen des FDZ-DZHW. Das erzeugte XML wird manuell in DataCite Fabrica hochgeladen.</p>
+
+    <section class="start" aria-labelledby="start-head">
+      <h2 id="start-head">Datensatz beginnen</h2>
+      <div class="entries">
+        <div class="entry">
+          <h3>Neu aus Profil</h3>
+          <p class="entry-hint">Leerer Datensatz mit den Vorbelegungen des Profils.</p>
+          <div id="profile-picker" class="fields"></div>
+          <button type="button" id="btn-new">Neu anlegen</button>
+        </div>
+
+        <div class="entry">
+          <h3>Bestehende DOI laden</h3>
+          <p class="entry-hint">Registrierten Datensatz von DataCite holen, etwa als Grundlage für eine neue Version.
+            „Laden“ übernimmt den ganzen Datensatz, „Felder übernehmen“ fragt vorher ab, was übernommen wird.</p>
+          <label class="sr-only" for="doi-input">DOI</label>
+          <div class="row">
+            <input type="text" id="doi-input" placeholder="10.21249/DZHW:nac2018-dmr-de:3.0.0">
+            <button type="button" id="btn-load-doi">Laden</button>
+            <button type="button" id="btn-take-from-doi">Felder übernehmen</button>
+          </div>
+        </div>
+
+        <div class="entry">
+          <h3>Datei öffnen</h3>
+          <p class="entry-hint">Vorhandenes XML oder einen gesicherten Speicherstand weiterbearbeiten.</p>
+          <div class="row">
+            <button type="button" id="btn-open-xml">XML-Datei</button>
+            <button type="button" id="btn-load">Speicherstand</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="alert" hidden role="alert"></div>
+    <div id="followup" class="followup" hidden></div>
+    <dialog id="takeover" class="takeover" aria-labelledby="takeover-head"></dialog>
+    <dialog id="loadmode" class="takeover" aria-labelledby="loadmode-head"></dialog>
+
+    <section class="headdata" aria-labelledby="head-head">
+      <h2 id="head-head">Kopfdaten</h2>
+      <div id="profile-bar" class="fields"></div>
+    </section>
+
+    <section class="record" aria-labelledby="record-head">
+      <h2 id="record-head">Dieser Datensatz</h2>
+      <div class="actions">
+        <button type="button" id="btn-xml">XML herunterladen</button>
+        <button type="button" id="btn-save">Speicherstand sichern</button>
+        <button type="button" id="btn-validate">Gegen Schema prüfen</button>
+        <span class="sep">·</span>
+        <label for="version-part">Nachfolger</label>
+        <select id="version-part">
+          <option value="major">Major</option>
+          <option value="minor">Minor</option>
+          <option value="patch">Patch</option>
+        </select>
+        <button type="button" id="btn-new-version">Nachfolger anlegen</button>
+      </div>
+      <div class="actions" id="language-actions">
+        <button type="button" id="btn-from-previous">Felder aus Vorversion übernehmen</button>
+        <button type="button" id="btn-counterpart">Andere Sprachfassung erzeugen</button>
+        <button type="button" id="btn-take-over">Felder aus Gegenstück übernehmen</button>
+        <button type="button" id="btn-compare">Sprachfassungen vergleichen</button>
+      </div>
+    </section>
+
+    <p id="note" class="note" role="status" aria-live="polite"></p>
+  </header>
+
+  <main>
+    <div id="form"></div>
+    <aside>
+      <h2 id="issues-head" aria-live="polite">Prüfung</h2>
+      <ul id="issues"></ul>
+      <h2>XML-Vorschau</h2>
+      <pre id="preview"></pre>
+    </aside>
+  </main>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

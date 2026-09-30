@@ -1,0 +1,32 @@
+{
+  "id": "base",
+  "label": "Basis (wird von allen Profilen geerbt)",
+  "abstract": true,
+  "placeholders": {
+    "studie": { "label": "Studienkürzel (MDM)", "pattern": "[a-z][a-z0-9]*", "example": "nac2018" },
+    "version": { "label": "Version", "pattern": "\\d+\\.\\d+\\.\\d+", "example": "3.0.0" },
+    "previousVersion": { "label": "Vorversion", "pattern": "\\d+\\.\\d+\\.\\d+", "example": "2.0.0", "optional": true },
+    "lang": { "label": "Sprache", "pattern": "de|en", "options": ["de", "en"], "example": "de" },
+    "ins": { "label": "Instrument-Nr. (MDM)", "pattern": "\\d+", "example": "1" },
+    "att": { "label": "Anhang-Nr. (MDM)", "pattern": "\\d+", "example": "1" },
+    "ds": { "label": "Datensatz-Nr.", "pattern": "\\d+", "example": "1" },
+    "nr": { "label": "Laufende Nr. (zweistellig)", "pattern": "\\d{2}", "example": "01" },
+    "jahr": { "label": "Jahr", "pattern": "\\d{4}", "example": "2026" },
+    "suffix": { "label": "DOI-Suffix", "pattern": "[A-Za-z0-9._;()/:-]+", "example": "beispiel-2026" }
+  },
+  "derived": {
+    "otherLang": { "from": "lang", "map": { "de": "en", "en": "de" } }
+  },
+  "defaults": {
+    "identifier": { "identifierType": "DOI" },
+    "publisher": {
+      "name": "German Centre for Higher Education Research and Science Studies",
+      "publisherIdentifier": "https://ror.org/01n8j6z65",
+      "publisherIdentifierScheme": "ROR",
+      "schemeURI": "https://ror.org/"
+    },
+    "publicationYear": "{currentYear}"
+  },
+  "locked": ["identifier.identifierType"],
+  "recommended": []
+}

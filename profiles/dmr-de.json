@@ -1,0 +1,31 @@
+{
+  "id": "dmr-de",
+  "label": "Daten- und Methodenbericht (deutsch)",
+  "extends": "base",
+  "doi": { "prefix": "10.21249", "suffix": "DZHW:{studie}-dmr-de:{version}" },
+  "resourceTypeGeneral": ["Report"],
+  "landingPage": "https://metadata.fdz.dzhw.eu/public/files/data-packages/stu-{studie}$-{version}/attachments/{studie}_MethodReport_de.pdf",
+  "defaults": {
+    "titles": [{ "value": "", "lang": "de" }],
+    "resourceType": { "resourceTypeGeneral": "Report", "value": "Data and Methods Report" },
+    "dates": [{ "dateType": "Issued", "value": "{currentYear}" }],
+    "language": "de",
+    "version": "{version}",
+    "rightsList": [
+      {
+        "value": "Creative Commons Attribution Non Commercial Share Alike 4.0 International",
+        "rightsURI": "https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode",
+        "rightsIdentifier": "cc-by-nc-sa-4.0",
+        "rightsIdentifierScheme": "SPDX",
+        "schemeURI": "https://spdx.org/licenses/"
+      }
+    ]
+  },
+  "relations": [
+    { "relationType": "IsPartOf", "relatedIdentifierType": "DOI", "resourceTypeGeneral": "Dataset", "value": "10.21249/DZHW:{studie}:{version}" },
+    { "relationType": "IsNewVersionOf", "relatedIdentifierType": "DOI", "resourceTypeGeneral": "Report", "value": "10.21249/DZHW:{studie}-dmr-de:{previousVersion}" },
+    { "relationType": "IsTranslationOf", "relatedIdentifierType": "DOI", "resourceTypeGeneral": "Report", "value": "10.21249/DZHW:{studie}-dmr-en:{version}" }
+  ],
+  "locked": ["publisher", "resourceType", "language", "version"],
+  "recommended": ["geoLocations"]
+}
