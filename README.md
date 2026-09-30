@@ -5,6 +5,10 @@ des FDZ-DZHW (Daten- und Methodenberichte und weitere Dokumente; Datenpakete wer
 [DataCite Fabrica](https://doi.datacite.org/) hochgeladen. Das Tool speichert keine Credentials
 und registriert nichts per API.
 
+> **Keine Gewähr für die erzeugten Metadaten.** Das Werkzeug unterstützt beim Erstellen, es ersetzt die
+> fachliche Prüfung nicht. Vor der Registrierung gehören Prüfliste und Schemaprüfung angesehen und das XML
+> gelesen — eine einmal registrierte DOI lässt sich nicht zurücknehmen.
+
 ## Voraussetzungen
 
 - Ein aktueller Browser
@@ -389,3 +393,14 @@ Die inhaltlichen Entscheidungen dahinter stehen in `docs/mapping.md`, Abschnitt 
 | `spike/` | CORS-Testseite für ROR/ORCID (Phase 2), aufrufbar unter <http://localhost:8123/spike/> |
 
 Speicherstände werden als JSON-Dateien exportiert und importiert. Nutzdaten landen nicht im `localStorage`.
+
+## Lizenz
+
+[MIT](LICENSE), Copyright © 2026 Deutsches Zentrum für Hochschul- und Wissenschaftsforschung (DZHW) GmbH.
+Die Lizenz enthält den üblichen Gewährleistungs- und Haftungsausschluss („AS IS, WITHOUT WARRANTY OF ANY
+KIND“).
+
+**Drittsoftware:** `vendor/xmllint-wasm` steht ebenfalls unter MIT (Copyright der libxml- und
+libxml.js-Autor:innen); der Lizenztext liegt unter `vendor/xmllint-wasm/COPYING` und bleibt dort. Die
+Referenz-XMLs unter `fixtures/` sind anonymisierte Kopien registrierter DataCite-Datensätze (siehe
+„Personendaten“); die Metadaten selbst stehen unter den Bedingungen der jeweiligen Registrierung.
