@@ -135,6 +135,26 @@ abbricht:
 Alle drei Fälle sind ausprobiert: `main` wird abgewiesen, `public` geht durch, ein untergeschobener alter
 Commit mit echten Daten wird abgewiesen, und ein gemeinsamer Push von `public` und `main` ebenfalls.
 
+### Zugang: Deploy Key statt Kontoschlüssel
+
+Gepusht wird mit einem **Deploy Key**, einem SSH-Schlüsselpaar, das nur für dieses eine Repository gilt.
+Das passt zum Schutz oben: Selbst wenn der Schlüssel abhandenkäme, reicht er nur an dieses Repository heran,
+nicht an das GitHub-Konto.
+
+- Der private Schlüssel liegt unter `~/.ssh/datacite_maker_deploy` und gehört **nie** ins Repository.
+- Der öffentliche Teil wird auf GitHub unter *Settings → Deploy keys → Add deploy key* eingetragen,
+  mit **Allow write access**.
+- In `~/.ssh/config` steht dafür ein eigener `Host`-Alias mit `IdentitiesOnly yes`. Ohne ihn böte SSH den
+  Vorgabeschlüssel für github.com an, der zu einem anderen Repository gehört und abgewiesen würde.
+- Die Remote-Adresse nutzt den Alias statt `github.com`:
+
+```
+git remote add origin git@github-datacite-maker:<konto>/<repo>.git
+```
+
+Ein neues Schlüsselpaar erzeugt `ssh-keygen -t ed25519 -f ~/.ssh/<name> -C "deploy key <repo>"`. GitHub lässt
+denselben Schlüssel nur für **ein** Repository zu; für ein weiteres braucht es ein neues Paar.
+
 **Zwei Dinge, die man wissen muss:**
 
 - **Hooks sind nicht Teil eines Klons.** In jeder neuen Arbeitskopie muss `node tools/public-branch.js install`
