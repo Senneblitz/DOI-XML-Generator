@@ -396,7 +396,7 @@ Speicherstände werden als JSON-Dateien exportiert und importiert. Nutzdaten lan
 
 ## Lizenz
 
-[MIT](LICENSE), Copyright © 2026 Deutsches Zentrum für Hochschul- und Wissenschaftsforschung (DZHW) GmbH.
+[MIT](LICENSE), Copyright © 2026 Andreas Daniel.
 Die Lizenz enthält den üblichen Gewährleistungs- und Haftungsausschluss („AS IS, WITHOUT WARRANTY OF ANY
 KIND“).
 
