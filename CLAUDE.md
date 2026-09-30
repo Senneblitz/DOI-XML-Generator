@@ -38,6 +38,8 @@ Verbindliche inhaltliche Entscheidungen: `docs/mapping.md`, Abschnitt 6.
 - Schema-Validierung in der Entwicklung mit `xmllint --noout --schema`.
 - Speicherstände als JSON-Dateien (Export/Import), kein `localStorage` für Nutzdaten.
 - Externe APIs (ROR, ORCID, DataCite) nur lesend. API-Fehler dürfen die Formularnutzung nie blockieren.
+- **Veröffentlicht wird nur der Zweig `public`** (ohne Vorgeschichte, `node tools/public-branch.js sync`).
+  `main` bleibt privat, seine Historie enthält die Originaldaten. Ein `pre-push`-Hook erzwingt das.
 - **Keine personenbezogenen Daten im Repository.** Das Repository ist öffentlich. Echte Namen und ORCID iDs
   gehören nach `fixtures-private/` (ignoriert); `fixtures/` enthält anonymisierte Kopien aus
   `node tools/anonymize.js`. In Tests, Doku und Beispielen keine realen Personen nennen; als Beispielperson

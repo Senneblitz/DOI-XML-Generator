@@ -107,6 +107,44 @@ Frage nennt ihn beim Inhalt: „Creator 1 „Brandt, Gesche“ wirklich entferne
 gefüllte Feld des Eintrags, lange Texte gekürzt. Eine leere Zeile verschwindet ohne Rückfrage. Das gilt auch für Größen, Formate und die optionalen Teilobjekte
 wie Punkt oder Rechteck.
 
+## Veröffentlichen: der Zweig `public`
+
+Die Historie dieses Repositories enthält in vier alten Commits die Original-Referenzdaten mit echten Namen
+und ORCID iDs. Deshalb wird **nicht `main` veröffentlicht**, sondern ein Zweig ohne jede Vorgeschichte:
+
+- **`main`** ist der Arbeitszweig mit der vollständigen Historie und bleibt lokal beziehungsweise privat.
+- **`public`** trägt denselben Dateibestand, aber keine gemeinsame Geschichte mit `main`. Der erste Commit ist
+  ein Wurzel-Commit, jeder weitere hat nur seinen Vorgänger auf `public` als Elternteil.
+
+```
+node tools/public-branch.js install   # einmal pro Arbeitskopie: pre-push-Hook einrichten
+node tools/public-branch.js sync      # public auf den aktuellen Stand von main bringen
+node tools/public-branch.js status    # zeigt Zweig, Historie und ob der Schutz steht
+git push origin public:main           # veröffentlicht; auf GitHub heißt der Zweig main
+```
+
+**Der Schutz ist ein `pre-push`-Hook** (`tools/hooks/pre-push`), der jeden Push prüft und in drei Fällen
+abbricht:
+
+1. Es soll ein anderer Zweig als `public` gepusht werden — auch bei `git push --all` oder `--mirror`, weil
+   jede Ref einzeln geprüft wird.
+2. Die Historie des Zweigs berührt `fixtures-private/`, `data/Creators.json` oder `data/people.json`.
+3. Ein Commit enthält eine ORCID iD außerhalb des erfundenen Blocks `0000-0000-` (die fiktive
+   Demonstrationsperson von ORCID ausgenommen). Geprüft wird je iD, nicht je Zeile.
+
+Alle drei Fälle sind ausprobiert: `main` wird abgewiesen, `public` geht durch, ein untergeschobener alter
+Commit mit echten Daten wird abgewiesen, und ein gemeinsamer Push von `public` und `main` ebenfalls.
+
+**Zwei Dinge, die man wissen muss:**
+
+- **Hooks sind nicht Teil eines Klons.** In jeder neuen Arbeitskopie muss `node tools/public-branch.js install`
+  einmal laufen, sonst fehlt der Schutz. `status` sagt, ob er steht.
+- Nach dem Anlegen von `origin` `install` noch einmal ausführen: Dann setzt es zusätzlich
+  `remote.origin.push`, sodass auch ein blankes `git push` nur `public` veröffentlicht.
+
+Wenn auf `public` vor dem ersten Push etwas Falsches gelandet ist, hilft `git branch -D public` und ein
+erneutes `sync` — solange nichts gepusht wurde, ist das folgenlos.
+
 ## Betrieb über GitHub Pages
 
 Die Anwendung ist statisch (HTML, CSS, ES-Module, kein Build-Schritt) und läuft deshalb unverändert auf
