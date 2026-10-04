@@ -131,13 +131,24 @@ git push origin public:main           # veröffentlicht; auf GitHub heißt der Z
 abbricht:
 
 1. Es soll ein anderer Zweig als `public` gepusht werden — auch bei `git push --all` oder `--mirror`, weil
-   jede Ref einzeln geprüft wird.
+   jede Ref einzeln geprüft wird. **Tags sind erlaubt**, aber nur wenn sie auf einen Commit von `public`
+   zeigen; ein Tag auf `main` würde dessen Historie mitveröffentlichen und wird abgewiesen.
 2. Die Historie des Zweigs berührt `fixtures-private/`, `data/Creators.json` oder `data/people.json`.
 3. Ein Commit enthält eine ORCID iD außerhalb des erfundenen Blocks `0000-0000-` (die fiktive
    Demonstrationsperson von ORCID ausgenommen). Geprüft wird je iD, nicht je Zeile.
 
-Alle drei Fälle sind ausprobiert: `main` wird abgewiesen, `public` geht durch, ein untergeschobener alter
-Commit mit echten Daten wird abgewiesen, und ein gemeinsamer Push von `public` und `main` ebenfalls.
+Alle Fälle sind ausprobiert: `main` wird abgewiesen, `public` geht durch, ein untergeschobener alter
+Commit mit echten Daten wird abgewiesen, ein gemeinsamer Push von `public` und `main` ebenfalls, ein Tag
+auf `public` geht durch und ein Tag auf `main` nicht.
+
+Eine Version wird so veröffentlicht:
+
+```
+node tools/public-branch.js sync
+git push
+git tag -a v1.0.0 public -m "DataCite Maker 1.0.0"
+git push origin v1.0.0
+```
 
 ### Zugang: Deploy Key statt Kontoschlüssel
 

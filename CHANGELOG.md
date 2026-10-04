@@ -83,5 +83,6 @@ DOI-Registrierungen des FDZ-DZHW; hochgeladen wird es weiterhin von Hand in Data
 
 - Die Referenz-XMLs im Repository sind anonymisierte Kopien registrierter Datensätze; echte Namen und
   ORCID iDs bleiben lokal (siehe README, „Personendaten“).
-- Veröffentlicht wird nur der Zweig `public` ohne Vorgeschichte; ein `pre-push`-Hook erzwingt das.
+- Veröffentlicht wird nur der Zweig `public` ohne Vorgeschichte; ein `pre-push`-Hook erzwingt das und
+  lässt Tags nur durch, wenn sie auf einen Commit dieses Zweigs zeigen.
 - Lizenz: MIT.

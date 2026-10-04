@@ -3,6 +3,8 @@
 #
 # Only the history-free branch "public" may leave this repository. Every other branch carries the
 # original reference records in its history, and those hold the names and ORCID iDs of real people.
+# Tags may travel too, but only when they point at a commit of that branch - a tag on another
+# branch would drag its whole history along.
 #
 # Installed into .git/hooks/pre-push by: node tools/public-branch.js install
 # (hooks are not part of a clone, so this has to be run once per working copy).
@@ -20,22 +22,37 @@ status=0
 while read -r local_ref local_sha remote_ref remote_sha; do
   [ "$local_sha" = "$EMPTY" ] && continue # deleting a remote branch is fine
 
-  if [ "$local_ref" != "$ALLOWED_REF" ]; then
-    echo "pre-push: $local_ref darf nicht nach $remote_url gepusht werden." >&2
-    echo "  Freigegeben ist nur $ALLOWED_REF. Andere Zweige enthalten personenbezogene Daten in der Historie." >&2
-    echo "  Zum Veroeffentlichen: node tools/public-branch.js sync, dann git push origin public:main" >&2
-    status=1
-    continue
-  fi
+  case "$local_ref" in
+    "$ALLOWED_REF")
+      target="$local_sha"
+      # Which commits would actually travel: everything on the first push, the new ones afterwards.
+      if [ "$remote_sha" = "$EMPTY" ]; then
+        commits=$(git rev-list "$target")
+      else
+        commits=$(git rev-list "$target" --not "$remote_sha")
+      fi
+      ;;
+    refs/tags/*)
+      # An annotated tag pushes the tag object, so resolve it to the commit it marks.
+      target=$(git rev-parse "$local_sha^{commit}" 2>/dev/null)
+      if [ -z "$target" ] || ! git merge-base --is-ancestor "$target" "$ALLOWED_REF" 2>/dev/null; then
+        echo "pre-push: $local_ref zeigt nicht auf einen Commit von $ALLOWED_REF." >&2
+        echo "  Ein Tag auf einem anderen Zweig wuerde dessen Historie mitveroeffentlichen." >&2
+        status=1
+        continue
+      fi
+      commits="$target"
+      ;;
+    *)
+      echo "pre-push: $local_ref darf nicht nach $remote_url gepusht werden." >&2
+      echo "  Freigegeben sind $ALLOWED_REF und Tags darauf. Andere Zweige enthalten personenbezogene Daten in der Historie." >&2
+      echo "  Zum Veroeffentlichen: node tools/public-branch.js sync, dann git push origin public:main" >&2
+      status=1
+      continue
+      ;;
+  esac
 
-  # Which commits would actually travel: everything on the first push, the new ones afterwards.
-  if [ "$remote_sha" = "$EMPTY" ]; then
-    commits=$(git rev-list "$local_sha")
-  else
-    commits=$(git rev-list "$local_sha" --not "$remote_sha")
-  fi
-
-  if [ -n "$(git rev-list "$local_sha" -- $FORBIDDEN_PATHS)" ]; then
+  if [ -n "$(git rev-list "$target" -- $FORBIDDEN_PATHS)" ]; then
     echo "pre-push: $local_ref beruehrt in seiner Historie: $FORBIDDEN_PATHS" >&2
     status=1
   fi
