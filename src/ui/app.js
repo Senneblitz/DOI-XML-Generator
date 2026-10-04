@@ -45,6 +45,7 @@ import { serialize } from '../xml/serialize.js';
 import { validateAgainstSchema } from '../xml/validate-schema.js';
 import { h, renderFields, renderGroup, renderStringGroup, applyPendingFocus, focusAfterRender, setFieldEnhancer } from './fields.js';
 import { toSaveState, fromSaveState, fileNameFor } from './storage.js';
+import { APP_VERSION } from '../version.js';
 import { attachTypeahead, withCache } from './typeahead.js';
 import { searchOrganizations } from '../api/ror.js';
 import { searchPeople as searchOrcid, fetchPerson, isValidId, idToUri, normalizeId } from '../api/orcid.js';
@@ -1661,6 +1662,7 @@ export async function start() {
   state.series = series;
   // The local people list is a convenience; without it the form still works.
   state.people = await loadPeople(readJson).catch(() => []);
+  byId('app-version').textContent = `Version ${APP_VERSION}`;
   setFieldEnhancer(enhanceField);
   newModel();
   wireActions();

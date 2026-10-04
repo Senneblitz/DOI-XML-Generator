@@ -1,6 +1,7 @@
 // Save file format and file names. DOM-free so it can be tested with node --test.
 
 import { completeResource } from '../model/model.js';
+import { APP_VERSION } from '../version.js';
 
 export const SAVE_FORMAT = 'fdz-dzhw-datacite-maker';
 export const SAVE_VERSION = 1;
@@ -14,6 +15,7 @@ export function toSaveState({ profileId, seriesId = null, values = {}, model, ta
   return {
     format: SAVE_FORMAT,
     formatVersion: SAVE_VERSION,
+    appVersion: APP_VERSION, // which version of the tool wrote this file; only informational
     savedAt: new Date().toISOString(),
     profileId,
     seriesId,
@@ -56,6 +58,7 @@ export function fromSaveState(data) {
     model: completeResource(data.model ?? {}),
     taken: readTaken(data.taken),
     landing: typeof data.landing === 'string' ? data.landing : null,
+    savedWith: typeof data.appVersion === 'string' ? data.appVersion : '',
   };
 }
 

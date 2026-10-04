@@ -13,6 +13,8 @@ Verbindliche inhaltliche Entscheidungen: `docs/mapping.md`, Abschnitt 6.
 - Nach jeder Phase: Tests laufen lassen, committen (aussagekräftige Commit-Message auf Englisch),
   Ergebnis kurz zusammenfassen, **stoppen**.
 - Keine Features über die aktuelle Phase hinaus. Offene Fragen stellen statt Annahmen treffen.
+- Nennenswerte Änderungen in `CHANGELOG.md` unter „Unveröffentlicht“ eintragen. Die Version des Werkzeugs
+  steht in `src/version.js` und in `package.json`; ein Test hält beide und den Changelog zusammen.
 - Inhaltliche Konventionen (resourceTypeGeneral, relationType, rights, publisher usw.) **nicht erfinden**,
   sondern aus den Fixtures (`fixtures/`, `docs/mapping.md`) ableiten und bei Unklarheit nachfragen.
 

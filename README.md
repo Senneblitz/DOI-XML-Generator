@@ -403,6 +403,15 @@ Die inhaltlichen Entscheidungen dahinter stehen in `docs/mapping.md`, Abschnitt 
 
 Speicherstände werden als JSON-Dateien exportiert und importiert. Nutzdaten landen nicht im `localStorage`.
 
+## Changelog und Version
+
+Nennenswerte Änderungen stehen in [CHANGELOG.md](CHANGELOG.md). Die Version des Werkzeugs steht in
+`src/version.js`, wird in `package.json` gespiegelt, oben im Kopf der Anwendung angezeigt und in jeden
+Speicherstand geschrieben (`appVersion`). Ein Test hält die drei Stellen zusammen.
+
+Davon zu unterscheiden sind `SAVE_VERSION` (Format der Speicherstände) und die Version im Formular, die
+zum beschriebenen Datensatz gehört.
+
 ## Lizenz
 
 [MIT](LICENSE), Copyright © 2026 Andreas Daniel.

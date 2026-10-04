@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import { toSaveState, fromSaveState, fileNameFor, SAVE_FORMAT } from '../src/ui/storage.js';
+import { APP_VERSION } from '../src/version.js';
 import { parse } from '../src/xml/parse.js';
 import { createResource, completeResource } from '../src/model/model.js';
 import { VOCAB } from '../src/model/vocab.js';
@@ -25,6 +26,13 @@ test('vocab contains the values used by the fixtures', () => {
   assert.deepEqual(VOCAB.nameType, ['Organizational', 'Personal']);
 });
 
+test('the tool version is the same in src/version.js, package.json and the changelog', () => {
+  const pkg = JSON.parse(readFileSync(join(ROOT, 'package.json'), 'utf8'));
+  assert.equal(pkg.version, APP_VERSION, 'package.json and src/version.js disagree');
+  const changelog = readFileSync(join(ROOT, 'CHANGELOG.md'), 'utf8');
+  assert.ok(changelog.includes(`## [${APP_VERSION}]`), `CHANGELOG.md has no entry for ${APP_VERSION}`);
+});
+
 test('save state roundtrips through JSON', () => {
   const model = parse(readFileSync(join(ROOT, 'fixtures/nac2018-dmr-de_3.0.0.xml'), 'utf8'), { DOMParser, XMLSerializer }).model;
   const state = {
@@ -36,7 +44,8 @@ test('save state roundtrips through JSON', () => {
     landing: 'https://metadata.fdz.dzhw.eu/public/files/data-packages/stu-nac2018$-3.0.0/attachments/nac2018_MethodReport_de.pdf',
   };
   const restored = fromSaveState(JSON.parse(JSON.stringify(toSaveState(state))));
-  assert.deepEqual(restored, state);
+  // The file also records which version of the tool wrote it.
+  assert.deepEqual(restored, { ...state, savedWith: APP_VERSION });
 });
 
 test('save state: the review of taken-over fields survives, unusable entries are dropped', () => {
