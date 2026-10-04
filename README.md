@@ -331,10 +331,19 @@ einem fremden Datensatz stammt und noch niemand geprüft hat.
 
 Ist ein Datenpaket verknüpft, steht im Abschnitt Schlagwörter der Knopf **„Schlagwörter aus Datenpaket
 übernehmen“**; daneben steht die DOI des Datenpakets. Er lädt das Datenpaket von DataCite und öffnet dieselbe
-Auswahl mit Haken, ein Eintrag je Schlagwort mit Thesaurus und Sprache.
+Auswahl mit Haken, ein Eintrag je Schlagwort mit Sprache.
 
-- Vorausgewählt sind die noch fehlenden Schlagwörter **in der Sprache des Datensatzes**. Datenpakete führen ihre
-  Schlagwörter in beiden Sprachen; die andere Sprache lässt sich über „Alle“ oder einzeln zuwählen.
+- **Die Version lässt sich wählen.** Datenpakete werden später registriert als die Berichte, die zu ihnen
+  gehören — die verknüpfte Version ist oft noch gar nicht veröffentlicht. Das Werkzeug fragt deshalb erst alle
+  registrierten Versionen ab und nimmt die verknüpfte, falls es sie gibt, sonst **die neueste darunter**; der
+  Hinweis nennt beide („Version 7.0.0 ist nicht registriert, gezeigt wird 6.0.0“). Im Dialog steht eine Auswahl
+  „Datenpaketversion“, ein Wechsel lädt die Schlagwörter dieser Version.
+- **Freie Schlagwörter und Thesaurusbegriffe stehen getrennt.** Die Liste ist nach Schema gruppiert, etwa
+  „Freie Schlagwörter (37)“ und „ELSST (CESSDA-Thesaurus) (26)“, jede Gruppe mit eigenem „Alle“ und „Keine“.
+  So lassen sich mit zwei Klicks nur die Thesaurusbegriffe oder nur die freien Schlagwörter übernehmen.
+  ELSST-Begriffe kommen mit `subjectScheme`, `schemeURI` und `valueURI` mit.
+- Vorausgewählt sind die noch fehlenden Schlagwörter **in der Sprache des Datensatzes**, quer über beide
+  Gruppen. Datenpakete führen ihre Schlagwörter in beiden Sprachen; die andere Sprache lässt sich zuwählen.
 - Bereits vorhandene Einträge sind als „bereits vorhanden“ markiert und bleiben unangehakt.
 - Übernommene Schlagwörter werden **ergänzt, nicht ersetzt**. Gleich sind zwei Schlagwörter bei gleichem Begriff,
   Thesaurus, `valueURI` und `xml:lang` (Groß-/Kleinschreibung egal); Doppelte werden übersprungen.

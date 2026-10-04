@@ -27,6 +27,33 @@ export function nextVersionValues(values, part = 'major') {
   return { ...values, version: bumpVersion(current, part), previousVersion: current };
 }
 
+/** Compares two x.y.z versions; negative when `a` is the older one. Unusable values sort last. */
+export function compareVersions(a, b) {
+  const parse = (v) => {
+    const m = SEMVER.exec(String(v ?? '').trim());
+    return m ? m.slice(1).map(Number) : null;
+  };
+  const left = parse(a);
+  const right = parse(b);
+  if (!left || !right) return left ? -1 : right ? 1 : 0;
+  for (let i = 0; i < 3; i += 1) if (left[i] !== right[i]) return left[i] - right[i];
+  return 0;
+}
+
+/**
+ * The version to work with out of those actually available: the wanted one when it is there,
+ * otherwise the newest below it. Data packages are registered later than the documents that
+ * belong to them, so the version a record links to often does not exist yet.
+ * Returns null when nothing is available.
+ */
+export function bestAvailableVersion(available, wanted) {
+  const sorted = [...available].sort(compareVersions);
+  if (!sorted.length) return null;
+  if (sorted.includes(wanted)) return wanted;
+  const below = sorted.filter((v) => compareVersions(v, wanted) < 0);
+  return below.length ? below[below.length - 1] : sorted[sorted.length - 1];
+}
+
 /**
  * The version that most likely precedes this one: 6.0.0 -> 5.0.0, 6.1.0 -> 6.0.0,
  * 6.0.1 -> 6.0.0. Returns null for a first version (1.0.0) or an unusable value.

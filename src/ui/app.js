@@ -49,8 +49,15 @@ import { attachTypeahead, withCache } from './typeahead.js';
 import { searchOrganizations } from '../api/ror.js';
 import { searchPeople as searchOrcid, fetchPerson, isValidId, idToUri, normalizeId } from '../api/orcid.js';
 import { loadPeople, searchPeople as searchLocalPeople, toPersonFields } from '../api/people.js';
-import { fetchDoi } from '../api/datacite.js';
-import { bumpVersion, nextVersionValues, staleVersionRelations, previousVersionGuess } from '../model/version.js';
+import { fetchDoi, fetchVersions, versionOf } from '../api/datacite.js';
+import {
+  bumpVersion,
+  nextVersionValues,
+  staleVersionRelations,
+  previousVersionGuess,
+  compareVersions,
+  bestAvailableVersion,
+} from '../model/version.js';
 import { dataPackageDoi, hasSubject, addSubjects } from '../model/datapackage.js';
 import {
   markTaken,
@@ -574,7 +581,8 @@ function subjectActions() {
   const doi = dataPackageDoi(state.model);
   if (!doi) return null;
   return h('div', { class: 'actions' }, [
-    h('button', { type: 'button', text: 'Schlagwörter aus Datenpaket übernehmen', onClick: subjectsFromDataPackage }),
+    // Called without an argument: the click event must not end up as the wanted version.
+    h('button', { type: 'button', text: 'Schlagwörter aus Datenpaket übernehmen', onClick: () => subjectsFromDataPackage() }),
     h('span', { class: 'entry-hint', text: `Datenpaket: ${doi}` }),
   ]);
 }
@@ -1274,8 +1282,8 @@ const TAKEOVER_HEADINGS = {
  * Opens the modal checkbox list. `entries` is [{ key, label }], `preselected` the ticked keys;
  * `onApply` receives the keys that are still ticked when the user confirms.
  */
-function openPicker({ heading, hint, entries, preselected, note, onApply }) {
-  state.takeover = { heading, hint, entries, selection: new Set(preselected), onApply };
+function openPicker({ heading, hint, entries, preselected, note, onApply, controls = null }) {
+  state.takeover = { heading, hint, entries, selection: new Set(preselected), onApply, controls };
   state.note = note;
   render();
 }
@@ -1313,20 +1321,46 @@ function renderTakeover() {
     return;
   }
 
-  const { heading, hint, entries, selection } = state.takeover;
+  const { heading, hint, entries, selection, controls } = state.takeover;
   box.append(h('h3', { id: 'takeover-head', text: heading }), h('p', { class: 'entry-hint', text: hint }));
+  if (controls) box.append(controls());
 
-  const list = h('div', { class: 'takeover-fields' });
-  for (const [index, entry] of entries.entries()) {
-    const id = `take-${index}`;
-    const input = h('input', { type: 'checkbox', id, checked: selection.has(entry.key) });
-    input.addEventListener('change', () => {
-      if (input.checked) selection.add(entry.key);
-      else selection.delete(entry.key);
-    });
-    list.append(h('label', { class: 'takeover-field', for: id }, [input, h('span', { text: entry.label })]));
+  // Entries may name a group (free keywords, thesaurus); each group gets its own Alle/Keine.
+  const groups = new Map();
+  for (const entry of entries) {
+    const name = entry.group ?? '';
+    if (!groups.has(name)) groups.set(name, []);
+    groups.get(name).push(entry);
   }
-  box.append(list);
+
+  let index = 0;
+  for (const [name, group] of groups) {
+    if (name) {
+      box.append(h('div', { class: 'takeover-group' }, [
+        h('strong', { text: `${name} (${group.length})` }),
+        h('button', { type: 'button', class: 'plain', text: 'Alle', onClick: () => {
+          group.forEach((e) => selection.add(e.key));
+          renderTakeover();
+        } }),
+        h('button', { type: 'button', class: 'plain', text: 'Keine', onClick: () => {
+          group.forEach((e) => selection.delete(e.key));
+          renderTakeover();
+        } }),
+      ]));
+    }
+    const list = h('div', { class: 'takeover-fields' });
+    for (const entry of group) {
+      const id = `take-${index}`;
+      index += 1;
+      const input = h('input', { type: 'checkbox', id, checked: selection.has(entry.key) });
+      input.addEventListener('change', () => {
+        if (input.checked) selection.add(entry.key);
+        else selection.delete(entry.key);
+      });
+      list.append(h('label', { class: 'takeover-field', for: id }, [input, h('span', { text: entry.label })]));
+    }
+    box.append(list);
+  }
 
   const alle = h('button', { type: 'button', class: 'plain', text: 'Alle', onClick: () => {
     entries.forEach((e) => selection.add(e.key));
@@ -1379,15 +1413,22 @@ function applyTakeover(doi, source, fields) {
 }
 
 /** Loads the linked data package and offers its subjects for the record. */
-async function subjectsFromDataPackage() {
-  const doi = dataPackageDoi(state.model);
-  if (!doi) {
+async function subjectsFromDataPackage(wantedVersion = null) {
+  const linked = dataPackageDoi(state.model);
+  if (!linked) {
     state.note = 'Dieser Datensatz ist mit keinem Datenpaket verknüpft.';
     return refresh();
   }
-  state.note = `Datenpaket ${doi} wird geladen …`;
+  state.note = `Datenpaket ${linked} wird gesucht …`;
   refresh();
   try {
+    // Data packages are registered after the report, so the linked version often does not exist
+    // yet. The registered ones are offered instead, newest first.
+    const versions = await fetchVersions(linked).catch(() => []);
+    const linkedVersion = versionOf(linked);
+    const chosen = wantedVersion ?? bestAvailableVersion(versions.map((v) => v.version), linkedVersion);
+    const doi = versions.find((v) => v.version === chosen)?.doi ?? linked;
+
     const record = await fetchDoi(doi);
     if (!record) {
       state.note = `Das Datenpaket ${doi} ist bei DataCite nicht registriert.`;
@@ -1403,16 +1444,23 @@ async function subjectsFromDataPackage() {
       state.note = `Alle ${subjects.length} Schlagwörter des Datenpakets ${record.doi} sind bereits vorhanden.`;
       return refresh();
     }
+
     // Data packages carry their subjects in both languages; preselected are the ones that match
     // this record. Everything else stays available through the list.
     const lang = state.model.language;
     const fits = (s) => !lang || !s.lang || s.lang === lang;
+    const other = chosen && linkedVersion && chosen !== linkedVersion
+      ? ` Version ${linkedVersion} ist nicht registriert, gezeigt wird ${chosen}.`
+      : '';
+
     openPicker({
       heading: 'Schlagwörter aus dem Datenpaket übernehmen',
-      hint: `Quelle: ${record.doi} · ${subjects.length} Schlagwörter, vorausgewählt sind die noch fehlenden${lang ? ` mit Sprache „${lang}“` : ''}.`,
+      hint: `Quelle: ${record.doi} · ${subjects.length} Schlagwörter, vorausgewählt sind die noch fehlenden${lang ? ` mit Sprache „${lang}“` : ''}.${other}`,
+      controls: () => versionControl(versions, chosen, linkedVersion),
       entries: subjects.map((s, i) => ({
         key: String(i),
-        label: subjectLabel(s) + (known[i] ? ' – bereits vorhanden' : ''),
+        group: subjectGroup(s),
+        label: entryLabel(s) + (known[i] ? ' – bereits vorhanden' : ''),
       })),
       preselected: subjects.map((_, i) => String(i)).filter((_, i) => !known[i] && fits(subjects[i])),
       note: `${record.doi} geladen. Schlagwörter auswählen und übernehmen.`,
@@ -1423,6 +1471,36 @@ async function subjectsFromDataPackage() {
     refresh();
   }
 }
+
+/** Lets the version be changed inside the dialog; changing it loads that version's subjects. */
+function versionControl(versions, chosen, linkedVersion) {
+  if (versions.length < 2) return h('p', { class: 'entry-hint', text: 'Weitere registrierte Versionen gibt es nicht.' });
+  const select = h('select', { id: 'subjects-version' });
+  for (const v of [...versions].sort((a, b) => compareVersions(b.version, a.version))) {
+    select.append(h('option', {
+      value: v.version,
+      selected: v.version === chosen,
+      text: v.version === linkedVersion ? `${v.version} (verknüpft)` : v.version,
+    }));
+  }
+  select.addEventListener('change', () => {
+    state.takeover = null;
+    subjectsFromDataPackage(select.value);
+  });
+  return h('div', { class: 'row' }, [h('label', { for: 'subjects-version', text: 'Datenpaketversion' }), select]);
+}
+
+const ELSST = 'ELSST';
+
+/** Free keywords on one side, thesaurus terms on the other. */
+const subjectGroup = (s) => {
+  const scheme = String(s.subjectScheme ?? '').trim();
+  if (!scheme) return 'Freie Schlagwörter';
+  return scheme.includes(ELSST) ? `${ELSST} (CESSDA-Thesaurus)` : scheme;
+};
+
+/** Inside the dialog the scheme is the group, so the entry only needs term and language. */
+const entryLabel = (s) => (s.lang ? `${s.value} (${s.lang})` : s.value);
 
 const subjectLabel = (s) => [s.value, s.subjectScheme && `· ${s.subjectScheme}`, s.lang && `(${s.lang})`]
   .filter(Boolean)

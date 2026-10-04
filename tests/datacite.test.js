@@ -4,8 +4,16 @@ import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
-import { fetchDoi, normalizeDoi, doiUrl, decodeBase64Xml } from '../src/api/datacite.js';
-import { bumpVersion, nextVersionValues, staleVersionRelations, previousVersionGuess, PARTS } from '../src/model/version.js';
+import { fetchDoi, fetchVersions, versionOf, normalizeDoi, doiUrl, decodeBase64Xml } from '../src/api/datacite.js';
+import {
+  bumpVersion,
+  nextVersionValues,
+  staleVersionRelations,
+  previousVersionGuess,
+  compareVersions,
+  bestAvailableVersion,
+  PARTS,
+} from '../src/model/version.js';
 import { loadProfiles, syncProfileFields, parseDoi, applyProfile, reconcileRelations } from '../src/model/profile.js';
 import { parse } from '../src/xml/parse.js';
 import { createRelatedIdentifier } from '../src/model/model.js';
@@ -211,4 +219,50 @@ test('reconcileRelations keeps unrelated relations and needs no previous version
   assert.deepEqual(removed, [], 'a different target is not superseded');
   assert.deepEqual(retargeted, []);
   assert.equal(model.relatedIdentifiers.length, 4);
+});
+
+// --- versions of a data package -------------------------------------------------------------
+
+test('fetchVersions asks for the registered versions of a versioned DOI', async () => {
+  const calls = [];
+  const fetchImpl = async (url) => {
+    calls.push(url);
+    return {
+      ok: true,
+      json: async () => ({
+        data: [
+          { attributes: { doi: '10.21249/dzhw:phd2014:6.0.0', state: 'findable' } },
+          { attributes: { doi: '10.21249/dzhw:phd2014:5.0.0', state: 'findable' } },
+          { attributes: { doi: '10.21249/dzhw:phd2014:7.0.0', state: 'draft' } }, // not public yet
+          { attributes: { doi: '10.5072/dzhw:phd2014:9.0.0', state: 'findable' } }, // other prefix
+          { attributes: { doi: '10.21249/dzhw:phd2014', state: 'findable' } }, // no version
+        ],
+      }),
+    };
+  };
+  const versions = await fetchVersions('10.21249/DZHW:phd2014:7.0.0', { fetchImpl });
+  assert.deepEqual(versions.map((v) => v.version), ['6.0.0', '5.0.0']);
+  // The colons are escaped for the query language, the wildcard catches every version.
+  assert.ok(decodeURIComponent(calls[0]).includes('query=suffix:dzhw\\:phd2014\\:*'), calls[0]);
+  assert.deepEqual(await fetchVersions('10.21249/dzhw:phd2014', { fetchImpl }), [], 'no version, no search');
+});
+
+test('versionOf reads the version out of a DOI', () => {
+  assert.equal(versionOf('https://doi.org/10.21249/DZHW:phd2014:7.0.0'), '7.0.0');
+  assert.equal(versionOf('10.21249/DZHW:nac2018-dmr-de:3.0.1'), '3.0.1');
+  assert.equal(versionOf('10.21249/es:wps'), '');
+});
+
+test('bestAvailableVersion falls back to the newest registered version below the wanted one', () => {
+  const available = ['1.0.0', '3.0.1', '2.0.0', '6.0.0', '3.0.0'];
+  assert.equal(bestAvailableVersion(available, '7.0.0'), '6.0.0', 'linked version not registered yet');
+  assert.equal(bestAvailableVersion(available, '3.0.1'), '3.0.1', 'registered: taken as it is');
+  assert.equal(bestAvailableVersion(available, '0.5.0'), '6.0.0', 'nothing below: the newest one');
+  assert.equal(bestAvailableVersion([], '7.0.0'), null);
+});
+
+test('compareVersions orders by number, not alphabetically', () => {
+  assert.deepEqual(['10.0.0', '9.0.0', '1.2.0'].sort(compareVersions), ['1.2.0', '9.0.0', '10.0.0']);
+  assert.ok(compareVersions('3.0.1', '3.0.0') > 0);
+  assert.equal(compareVersions('2.0.0', '2.0.0'), 0);
 });

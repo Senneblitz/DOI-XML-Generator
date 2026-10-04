@@ -381,3 +381,19 @@ header section { margin-bottom: 1rem; }
 }
 
 .takeover-field input { margin: 0; }
+
+/* Gruppen in der Auswahl, z. B. freie Schlagwörter und Thesaurusbegriffe */
+.takeover-group {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin: .75rem 0 .1rem;
+  padding-top: .5rem;
+  border-top: 1px solid var(--line);
+  font-size: .85rem;
+}
+
+.takeover-group:first-of-type { border-top: none; padding-top: 0; margin-top: .25rem; }
+.takeover > .row { align-items: center; margin: .35rem 0 .1rem; }
+.takeover > .row label { font-size: .85rem; color: var(--muted); }
+.takeover > .row select { flex: 0 0 auto; }

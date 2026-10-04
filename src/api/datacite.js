@@ -19,6 +19,42 @@ export function decodeBase64Xml(base64) {
   return new TextDecoder('utf-8').decode(bytes);
 }
 
+/** Escapes the characters that carry meaning inside a query string value. */
+const escapeQuery = (value) => String(value).replace(/([+\-&|!(){}[\]^"~*?:\\/])/g, '\\$1');
+
+/** The version part of a DOI whose suffix ends in ":x.y.z", or '' when it has none. */
+export const versionOf = (doi) => {
+  const m = /:(\d+\.\d+\.\d+)$/.exec(normalizeDoi(doi));
+  return m ? m[1] : '';
+};
+
+/**
+ * All registered versions of a versioned DOI, newest last, each with its own DOI. Needed because
+ * data packages are registered later than the documents that belong to them: the version a record
+ * links to is often not published yet, and then an earlier one has to serve.
+ * Returns [] when the DOI carries no version or the search finds nothing.
+ */
+export async function fetchVersions(doi, { fetchImpl = fetch, signal } = {}) {
+  const id = normalizeDoi(doi);
+  const slash = id.indexOf('/');
+  const prefix = id.slice(0, slash);
+  const suffix = id.slice(slash + 1);
+  if (!versionOf(id)) return []; // nothing to enumerate without a version in the suffix
+  const base = suffix.replace(/:[^:]*$/, '');
+
+  const query = `suffix:${escapeQuery(base.toLowerCase())}\\:*`;
+  const url = `${ENDPOINT}?query=${encodeURIComponent(query)}&page[size]=100&fields[dois]=doi,state`;
+  const res = await fetchImpl(url, { signal, headers: { Accept: 'application/vnd.api+json' } });
+  if (!res.ok) throw new Error(`DataCite-Suche fehlgeschlagen (HTTP ${res.status}).`);
+  const body = await res.json();
+
+  return (body?.data ?? [])
+    .map((d) => ({ doi: d.attributes?.doi ?? d.id, state: d.attributes?.state ?? '' }))
+    .filter((d) => d.state === 'findable' && d.doi?.toLowerCase().startsWith(`${prefix.toLowerCase()}/`))
+    .map((d) => ({ ...d, version: versionOf(d.doi) }))
+    .filter((d) => d.version);
+}
+
 /**
  * Fetches one DOI. Returns null when it is unknown (HTTP 404).
  * The result carries the stored XML, the record's state for the status line and the registered
